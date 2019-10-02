@@ -3,8 +3,10 @@
 
 #include<stdint.h>
 
+#pragma pack(1)
+
 typedef struct {             // Total: 54 bytes
-  uint16_t  type;             // Magic identifier
+  uint16_t  signature;        // Magic identifier
   uint32_t  size;             // File size in bytes
   uint16_t  reserved1;        // Not used
   uint16_t  reserved2;        // Not used
@@ -26,5 +28,12 @@ typedef struct {
     BMPHeader header;
     unsigned char* data;
 } BMPImage;
+
+#pragma pack()
+
+BMPImage* read_bmp(const char*);
+void write_bmp(BMPImage*, const char*);
+void free_bmp(BMPImage*);
+BMPImage* black_white(BMPImage*);
 
 #endif
