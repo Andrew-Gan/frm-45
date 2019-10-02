@@ -1,12 +1,10 @@
 # frm-45
 ECE362 Project 1 Drawing Machine  
 
-## Please look at the [diagram](SD_Card_reader/diagram.png) to avoid using configured pin
+## Please look at the [diagram](https://github.com/Andrew-Gan/frm-45/blob/second/SD_Card_reader/diagram.png) to avoid using configured pin
 
 Stepper and Servo Motors  
 
-[SD Card Programming](SD_Card_reader)  
-
-Image Processing  
-
+[SD Card Programming](https://github.com/Andrew-Gan/frm-45/tree/second/SD_Card_reader)  
+[Image Processing](https://github.com/Andrew-Gan/frm-45/tree/master/Image_Processing)
 
