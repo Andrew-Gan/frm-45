@@ -84,7 +84,7 @@ BMPImage* process_bmp(BMPImage* img, algoMode mode, float thres_val) {
             centrePx += img->data[dataOffs + 1];
             centrePx += img->data[dataOffs + 2];
             
-            if(mode == bw_rel){    
+            if(mode == bw_rel || mode == bw_abs){    
                 if(row != width_px - 1) {
                     // consider pixel above
                     surrPx += img->data[dataOffs + (width_px * bytes_per_pixel) + padding_byte];
@@ -142,7 +142,7 @@ BMPImage* process_bmp(BMPImage* img, algoMode mode, float thres_val) {
                     px_count++;
                 }
                 centrePx *= px_count;
-                ret = centrePx <= surrPx ? 0 : 255;
+                ret = mode == bw_rel ? centrePx <= surrPx ? 0 : 255 : (int)((float)centrePx / surrPx * (thres_val * 255));
                 bw_bmp->data[dataOffs] = ret;
                 bw_bmp->data[dataOffs + 1] = ret;
                 bw_bmp->data[dataOffs + 2] = ret;
@@ -152,70 +152,6 @@ BMPImage* process_bmp(BMPImage* img, algoMode mode, float thres_val) {
                 bw_bmp->data[dataOffs] = centrePx > ((thres_val * 255) * 3) ? 255 : 0;
                 bw_bmp->data[dataOffs + 1] = centrePx > ((thres_val * 255) * 3) ? 255 : 0;
                 bw_bmp->data[dataOffs + 2] = centrePx > ((thres_val * 255) * 3) ? 255 : 0;
-            }
-
-            else if(mode == grey_rel) {
-                if(row != width_px - 1) {
-                    // consider pixel above
-                    surrPx += img->data[dataOffs + (width_px * bytes_per_pixel) + padding_byte];
-                    surrPx += img->data[dataOffs + (width_px * bytes_per_pixel) + padding_byte + 1];
-                    surrPx += img->data[dataOffs + (width_px * bytes_per_pixel) + padding_byte + 2];
-                    px_count++;
-                }
-                if(row != 0) {
-                    // consider pixel below
-                    surrPx += img->data[dataOffs - (width_px * bytes_per_pixel) - padding_byte];
-                    surrPx += img->data[dataOffs - (width_px * bytes_per_pixel) - padding_byte + 1];
-                    surrPx += img->data[dataOffs - (width_px * bytes_per_pixel) - padding_byte + 2];
-                    px_count++;
-                }
-                if(col != 0) {
-                    // consider pixel to the left
-                    surrPx += img->data[dataOffs - bytes_per_pixel];
-                    surrPx += img->data[dataOffs - bytes_per_pixel + 1];
-                    surrPx += img->data[dataOffs - bytes_per_pixel + 2];
-                    px_count++;
-                }
-                if(col != width_px - 1) {
-                    // consider pixel to the right
-                    surrPx += img->data[dataOffs + bytes_per_pixel];
-                    surrPx += img->data[dataOffs + bytes_per_pixel + 1];
-                    surrPx += img->data[dataOffs + bytes_per_pixel + 2];
-                    px_count++;
-                }
-                if(row != 0 && col != 0) {
-                    // consider pixel to the top left
-                    surrPx += img->data[dataOffs + (width_px * bytes_per_pixel) + padding_byte - bytes_per_pixel];
-                    surrPx += img->data[dataOffs + (width_px * bytes_per_pixel) + padding_byte - bytes_per_pixel + 1];
-                    surrPx += img->data[dataOffs + (width_px * bytes_per_pixel) + padding_byte - bytes_per_pixel + 2];
-                    px_count++;
-                }
-                if(row != height_px - 1 && col != width_px - 1) {
-                    // consider pixel to the top right
-                    surrPx += img->data[dataOffs + (width_px * bytes_per_pixel) + padding_byte + bytes_per_pixel];
-                    surrPx += img->data[dataOffs + (width_px * bytes_per_pixel) + padding_byte + bytes_per_pixel + 1];
-                    surrPx += img->data[dataOffs + (width_px * bytes_per_pixel) + padding_byte + bytes_per_pixel + 2];
-                    px_count++;
-                }
-                if(row != 0 && col != 0) {
-                    // consider pixel to the bottom left
-                    surrPx += img->data[dataOffs - (width_px * bytes_per_pixel) - padding_byte - bytes_per_pixel];
-                    surrPx += img->data[dataOffs - (width_px * bytes_per_pixel) - padding_byte - bytes_per_pixel + 1];
-                    surrPx += img->data[dataOffs - (width_px * bytes_per_pixel) - padding_byte - bytes_per_pixel + 2];
-                    px_count++;
-                }
-                if(row != 0 && col != width_px - 1) {
-                    // consider pixel to the bottom right
-                    surrPx += img->data[dataOffs - (width_px * bytes_per_pixel) - padding_byte + bytes_per_pixel];
-                    surrPx += img->data[dataOffs - (width_px * bytes_per_pixel) - padding_byte + bytes_per_pixel + 1];
-                    surrPx += img->data[dataOffs - (width_px * bytes_per_pixel) - padding_byte + bytes_per_pixel + 2];
-                    px_count++;
-                }
-                centrePx *= px_count;
-                ret = (int)((float)centrePx / surrPx * (thres_val * 255));
-                bw_bmp->data[dataOffs] = ret;
-                bw_bmp->data[dataOffs + 1] = ret;
-                bw_bmp->data[dataOffs + 2] = ret;
             }
 
             else {
