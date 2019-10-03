@@ -5,7 +5,7 @@
 
 #pragma pack(1)
 
-typedef struct {             // Total: 54 bytes
+typedef struct {              // Total: 54 bytes
   uint16_t  signature;        // Magic identifier
   uint32_t  size;             // File size in bytes
   uint16_t  reserved1;        // Not used
@@ -31,9 +31,24 @@ typedef struct {
 
 #pragma pack()
 
+/******************************************************************
+ * typedef enum algoMode
+ * 
+ * bw_rel   - convert pixel to B/W by comparing with surrounding pixels
+ * bw_abs   - convert pixel to B/W by comparing with threshold luminance
+ * grey_rel - convert pixel to grey by setting to ratio of self to surrounding
+ * grey_abs - convert pixel to grey by setting to average rbg of self
+******************************************************************/
+typedef enum {
+    bw_rel = 0,
+    bw_abs = 1,
+    grey_rel = 2,
+    grey_abs = 3
+} algoMode;
+
 BMPImage* read_bmp(const char*);
 void write_bmp(BMPImage*, const char*);
 void free_bmp(BMPImage*);
-BMPImage* black_white(BMPImage*);
+BMPImage* process_bmp(BMPImage*, algoMode, float);
 
 #endif
