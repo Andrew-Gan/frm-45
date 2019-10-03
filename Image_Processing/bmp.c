@@ -84,7 +84,7 @@ BMPImage* process_bmp(BMPImage* img, algoMode mode, float thres_val) {
             centrePx += img->data[dataOffs + 1];
             centrePx += img->data[dataOffs + 2];
             
-            if(mode == bw_rel || mode == bw_abs){    
+            if(mode == bw_rel || mode == grey_rel){    
                 if(row != width_px - 1) {
                     // consider pixel above
                     surrPx += img->data[dataOffs + (width_px * bytes_per_pixel) + padding_byte];
