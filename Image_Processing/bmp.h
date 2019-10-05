@@ -43,12 +43,14 @@ typedef enum {
     bw_rel = 0,
     bw_abs = 1,
     grey_rel = 2,
-    grey_abs = 3
+    grey_abs = 3,
+    red_abs = 4
 } algoMode;
 
 BMPImage* read_bmp(const char*);
 void write_bmp(BMPImage*, const char*);
 void free_bmp(BMPImage*);
 BMPImage* process_bmp(BMPImage*, algoMode, float);
+void parse_bmp(BMPImage*, bool);
 
 #endif

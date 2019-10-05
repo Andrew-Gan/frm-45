@@ -4,6 +4,8 @@
 #include <stdbool.h>
 #include "bmp.h"
 
+#define PAPER_WIDTH 215.9
+
 // helper functions not to be called from outside
 void __dupl_bmp(BMPImage*, BMPImage*);
 
@@ -162,4 +164,54 @@ BMPImage* process_bmp(BMPImage* img, algoMode mode, float thres_val) {
         }
     }
     return bw_bmp;
+}
+
+/******************************************************************
+ * void parse_bmp(BMPImage* img)
+ * 
+ * input:
+ * img - black and white image to be converted to instruction code
+ * auto_scaling - scale to paper size if true
+******************************************************************/
+void parse_bmp(BMPImage* img, bool auto_scaling) {
+    int stack[2] = {0};
+    int pixel_count = 0, size = img->header.image_size_bytes, bpp = img->header.bits_per_pixel / 8;
+    bool isPenDown = false;
+    unsigned char *data = img->data;
+    int width_px = img->header.width_px, padding_byte = width_px % 4;
+    float mm_per_pixel = PAPER_WIDTH / width_px;
+    FILE* fp = fopen("instruction.txt", "w");
+    for(int offs = 0; offs < size; offs += bpp, pixel_count++) {
+        if(data[offs] > 128 && isPenDown || data[offs] <= 128 && !isPenDown) {
+            isPenDown = !isPenDown;
+            if(auto_scaling) {
+                fprintf(fp, "%.1f %.1f %d\n", (pixel_count % width_px) * (mm_per_pixel), (pixel_count / width_px) * mm_per_pixel, isPenDown);
+            }
+            else {
+                fprintf(fp, "%d %d %d\n", (pixel_count % width_px), (pixel_count / width_px), isPenDown);
+            }
+        }
+        offs += (pixel_count + 1) % width_px == 0 ? padding_byte : 0;
+        if((pixel_count + 1) % width_px == 0 && auto_scaling) {
+            stack[0] = offs;
+            stack[1] = pixel_count;
+            // inner loop operation
+            pixel_count -= width_px - 1;
+            offs -= ((width_px - 1) * bpp) + padding_byte;
+            for(float i = 0.1; i < mm_per_pixel; i += 0.1) {
+                for(; pixel_count < width_px; offs += bpp, pixel_count++) {
+                    if(data[offs] > 128 && isPenDown || data[offs] <= 128 && !isPenDown) {
+                        isPenDown = !isPenDown;
+                        fprintf(fp, "%.1f %.1f %d\n", (pixel_count % width_px) * mm_per_pixel, (pixel_count / width_px) * mm_per_pixel + i, isPenDown);
+                    }
+                }
+                pixel_count -= width_px;
+                offs -= width_px * bpp;
+            }
+            //end of inner loop operation
+            offs = stack[0];
+            pixel_count = stack[1];
+        }
+    }
+    fclose(fp);
 }
