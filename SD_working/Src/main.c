@@ -24,6 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "ff.h"
 #include "stm32f0xx_hal.h"
 #include "fatfs_sd.h"
 #include <string.h>
@@ -69,7 +70,7 @@ FATFS fs;  // file system
 FIL fil;  // file
 FRESULT fresult;  // to store the result
 char buffer[1024]; // to store data
-
+BYTE res; //result of reading a directory
 UINT br, bw;   // file read/write count
 
 /* capacity related variables */
@@ -100,6 +101,42 @@ void bufclear (void)  // clear buffer
 		buffer[i] = '\0';
 	}
 }
+
+/* scan all the files in the directory (*path)*/
+FRESULT scan_files (
+    char* path        /* Start node to be scanned (***also used as work area***) */
+)
+{
+    FRESULT res;
+    DIR dir;
+    UINT i;
+    static FILINFO fno;
+
+
+    res = f_opendir(&dir, path);                       /* Open the directory */
+    if (res == FR_OK) {
+        for (;;) {
+            res = f_readdir(&dir, &fno);                   /* Read a directory item */
+            if (res != FR_OK || fno.fname[0] == 0) break;  /* Break on error or end of dir */
+            if (fno.fattrib & AM_DIR) {                    /* It is a directory */
+                i = strlen(path);
+                sprintf(&path[i], "/%s", fno.fname);
+                send_uart(&path[i]);
+                res = scan_files(path);                    /* Enter the directory */
+                if (res != FR_OK) break;
+                path[i] = 0;
+            } else {                                       /* It is a file. */
+                sprintf(buffer,"%s/%s\n", path, fno.fname);
+                send_uart(buffer);
+                bufclear();
+            }
+        }
+        f_closedir(&dir);
+    }
+
+    return res;
+}
+
 
 /* USER CODE END 0 */
 
@@ -139,16 +176,16 @@ int main(void)
 	HAL_Delay(500);
 
 
-	DSTATUS my_status = SD_disk_initialize(0);
-	if(my_status == STA_NOINIT ){
-		send_uart ("error in initializing SD CARD...\n");
-	}
-	if (my_status == STA_NODISK){
-		send_uart ("No medium in the drive...\n");
-	}
-	if (my_status == STA_PROTECT){
-		send_uart (" Write protected...\n");
-	}
+//	DSTATUS my_status = SD_disk_initialize(0);
+//	if(my_status == STA_NOINIT ){
+//		send_uart ("error in initializing SD CARD...\n");
+//	}
+//	if (my_status == STA_NODISK){
+//		send_uart ("No medium in the drive...\n");
+//	}
+//	if (my_status == STA_PROTECT){
+//		send_uart (" Write protected...\n");
+//	}
 
   /* Mount SD Card */
  	    fresult = f_mount(&fs, "", 0);
@@ -177,15 +214,20 @@ int main(void)
 //
 //
  	        /* Open file to write/ create a file if it doesn't exist */
- 	        fresult = f_open(&fil, "file1.txt", FA_OPEN_ALWAYS | FA_READ | FA_WRITE);
-
- 	        /* Writing text */
- 	        fresult = f_puts("This data is from the First FILE\n\n", &fil);
-
- 	        /* Close file */
- 	        fresult = f_close(&fil);
+ 	        // file name has to be capitalized !!
+// 	        fresult = f_open(&fil, "file3.txt", FA_OPEN_ALWAYS | FA_READ | FA_WRITE);
 //
-// 	        send_uart ("File1.txt created and the data is written \n");
+// 	        /* Writing text */
+// 	        fresult = f_puts("This data is from the Second FILE\n\n", &fil);
+//
+// 	        /* Close file */
+// 	        fresult = f_close(&fil);
+//
+// 	        send_uart ("FILE2.txt created and the data is written \n");
+
+ 	        // read directory
+
+ 	       res = scan_files ("/");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -195,6 +237,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
   }
   /* USER CODE END 3 */
 }
