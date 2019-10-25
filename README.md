@@ -8,3 +8,6 @@ Stepper and Servo Motors
 [SD Card Programming](https://github.com/Andrew-Gan/frm-45/tree/second/SD_working)  
 [Image Processing](https://github.com/Andrew-Gan/frm-45/tree/master/Image_Processing)
 
+used pins:
+pa8 - servomotor  
+pa5-7 and pc4 - sd card reader
