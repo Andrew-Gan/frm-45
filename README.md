@@ -16,4 +16,4 @@ Stepper and Servo Motors
 * [Gcode Reference](https://www.cnccookbook.com/g-code-m-code-reference-list-cnc-mills/)
 * [Another website about how to make gcode](https://www.marginallyclever.com/2013/08/how-to-build-an-2-axis-arduino-cnc-gcode-interpreter/?fbclid=IwAR2Cuwl6wh2F5Wqw8JK4fef5dCa7CKCwGwoWh0Y8hn-iv6d_DvxPZTSHs24)
 
-[pin]:(pin)
+[pin]:(pin.png)
