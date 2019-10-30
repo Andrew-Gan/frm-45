@@ -8,7 +8,7 @@ Stepper and Servo Motors
 ## Used Pins
 * **PA8** - _servomotor_  
 * **PA5-7** and **PC9** - _sd card reader_
-![pin]
+![pin](pin.png)
 
 ## References
 * [CoreXY CNC Plotter](https://www.instructables.com/id/CoreXY-CNC-Plotter/?fbclid=IwAR0pwp5_IWx3ZKXX_-JnrqQA2Jc5w_0K_mVkKk8bpvbu7aeOSSTUAUPy2AY) 
@@ -16,4 +16,4 @@ Stepper and Servo Motors
 * [Gcode Reference](https://www.cnccookbook.com/g-code-m-code-reference-list-cnc-mills/)
 * [Another website about how to make gcode](https://www.marginallyclever.com/2013/08/how-to-build-an-2-axis-arduino-cnc-gcode-interpreter/?fbclid=IwAR2Cuwl6wh2F5Wqw8JK4fef5dCa7CKCwGwoWh0Y8hn-iv6d_DvxPZTSHs24)
 
-[pin]:(pin.png)
+
