@@ -5,7 +5,7 @@ Stepper and Servo Motors
 [SD Card Programming](https://github.com/Andrew-Gan/frm-45/tree/second/SD_working)  
 [Image Processing](https://github.com/Andrew-Gan/frm-45/tree/master/Image_Processing)
 
-## USED PINS
+## Used Pins
 * **PA8** - _servomotor_  
 * **PA5-7** and **PC9** - _sd card reader_
 
