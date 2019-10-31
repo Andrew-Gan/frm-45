@@ -7,9 +7,9 @@ Stepper and Servo Motors
 
 ## Used Pins
 * **PA8** - _servomotor_  
-* **PA5-7** and **PC9** - _sd card reader_
+* **PA4-7** and **PC9** - _sd card reader_
 * **PA12-15**  - _OLED display_
-![pin](pin.png)
+
 
 ## References
 * [CoreXY CNC Plotter](https://www.instructables.com/id/CoreXY-CNC-Plotter/?fbclid=IwAR0pwp5_IWx3ZKXX_-JnrqQA2Jc5w_0K_mVkKk8bpvbu7aeOSSTUAUPy2AY) 
