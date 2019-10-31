@@ -20,3 +20,8 @@
 #define CMD38   (38)        /* ERASE */
 #define CMD55   (55)        /* APP_CMD */
 #define CMD58   (58)        /* READ_OCR */
+
+#define SPI1 1
+#define SPI2 2
+
+
