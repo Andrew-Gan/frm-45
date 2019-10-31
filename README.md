@@ -11,3 +11,5 @@ ECE362 Project 1 Drawing Machine
 - [I/O Pin Setup](https://sites.google.com/site/embeddedfun01/fat-filesystem-on-sd-card)
 - [SPI and SD Cards reading](http://www.dejazzer.com/ee379/lecture_notes/lec12_sd_card.pdf)
 - [FRM 745](https://engineering.purdue.edu/ece362/refs/STM32F0x1_Family_Reference.pdf#%5B%7B%22num%22%3A6629%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C67%2C226%2Cnull%5D)
+
+![SD_init](Sdinit.jpg)
