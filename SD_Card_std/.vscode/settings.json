@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "sd_card.h": "c",
+        "stm32f0xx.h": "c",
+        "stm32f0_discovery.h": "c"
+    }
+}
