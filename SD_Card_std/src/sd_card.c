@@ -275,7 +275,7 @@ DSTATUS SD_initialize (){
     uint16_t SPI_DataSize = SPI_CR2_DS_0 | SPI_CR2_DS_1 | SPI_CR2_DS_2; //so it set to 8 bit
     uint16_t SPI_CPOL = 0; //proper setting for SD read
     uint16_t SPI_CPHA = 0; //proper setting for SD read
-    uint16_t SPI_NSS = SPI_CR2_NSSP; //disable NSS
+    uint16_t SPI_NSS = 0; //disable NSS
     uint16_t SPI_BaudRatePrescaler =  SPI_CR1_BR_1 | SPI_CR1_BR_2; //use lowest frequency
     uint16_t SPI_SSO = 0;
     bool GPIO_as_SS = true; //use GPIO to toggle
