@@ -7,6 +7,16 @@
 
 static volatile uint16_t Timer1=0,Timer2=0;
 
+
+void SD_timer(){
+    WORD n;
+    n = Timer1;                     /* 1kHz decrement timer stopped at 0 */
+    if (n) Timer1 = --n;
+    n = Timer2;
+    if (n) Timer2 = --n;
+}
+
+
 void nano_wait(unsigned int n) {
     asm(    "        mov r0,%0\n"
             "repeat: sub r0,#83\n"
@@ -245,7 +255,7 @@ static bool select_card(){
     //dummy clock
     SPI_Send_8bit(sel_SPI1,0xFF);
     //wait for SD card to be ready
-    if(wait_for_card_ready(500)){
+    if(wait_for_card_ready(50)){
         return true;
     }
     deselect_card();
@@ -274,11 +284,14 @@ static BYTE send_cmd(BYTE cmd, DWORD arg){
 	SPI_Send_8bit(sel_SPI1, (BYTE)(arg >> 24));		/* Argument[31..24] */
 	SPI_Send_8bit(sel_SPI1, (BYTE)(arg >> 16));		/* Argument[23..16] */
 	SPI_Send_8bit(sel_SPI1, (BYTE)(arg >> 8));		/* Argument[15..8] */
-	SPI_Send_8bit(sel_SPI1, (BYTE)arg);				/* Argument[7..0] */
-	n = 0x01;										/* Dummy CRC + Stop */
+	SPI_Send_8bit(sel_SPI1, (BYTE)arg);				/* Argument[7..0] */										/* Dummy CRC + Stop */
 	//send optional CRC
-	SPI_Send_8bit(sel_SPI1, 0xFF);
+	n = 0x01;                           /* Dummy CRC + Stop */
+	    if (cmd == CMD0) n = 0x95;          /* Valid CRC for CMD0(0) */
+	    if (cmd == CMD8) n = 0x87;          /* Valid CRC for CMD8(0x1AA) */
+	SPI_Send_8bit(sel_SPI1,(BYTE)n);
 	
+
 	/* Receive command resp */
 	if (cmd == CMD12) {
 		SPI_Send_8bit(sel_SPI1, 0xFF);					/* Discard following one byte when CMD12 */
@@ -299,11 +312,11 @@ DSTATUS SD_initialize (){
     uint8_t SPIX = 1;
     uint16_t SPI_MODE = SPI_CR1_MSTR;
     uint16_t SPI_Direction = 0; // 2 line unidirectional data
-    uint16_t SPI_DataSize = SPI_CR2_DS_0 | SPI_CR2_DS_1 | SPI_CR2_DS_2; //so it set to 8 bit
+    uint16_t SPI_DataSize =  SPI_CR2_DS_0 | SPI_CR2_DS_1 | SPI_CR2_DS_2; //so it set to 8 bit
     uint16_t SPI_CPOL = 0; //proper setting for SD read
     uint16_t SPI_CPHA = 0; //proper setting for SD read
     uint16_t SPI_NSS = 0; //disable NSS
-    uint16_t SPI_BaudRatePrescaler =  SPI_CR1_BR_0 |SPI_CR1_BR_1 | SPI_CR1_BR_2; //use lowest frequency
+    uint16_t SPI_BaudRatePrescaler =  SPI_CR1_BR_1 | SPI_CR1_BR_2; //use lowest frequency
     uint16_t SPI_SSO = 0;
     bool GPIO_as_SS = true; //use GPIO to toggle
     init_spi(SPIX, SPI_MODE, SPI_Direction, SPI_DataSize, SPI_CPOL,
@@ -319,17 +332,10 @@ DSTATUS SD_initialize (){
     }
 
     BYTE test = send_cmd(CMD0,0);
+//    test = send_cmd(CMD8,0x1AA);
 
     return 0;
-
 }
 
 
 
-void SD_timer(){
-    WORD n;
-    n = Timer1;						/* 1kHz decrement timer stopped at 0 */
-	if (n) Timer1 = --n;
-	n = Timer2;
-	if (n) Timer2 = --n;
-}
