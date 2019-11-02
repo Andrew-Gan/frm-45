@@ -37,7 +37,7 @@ uint16_t SPI_BaudRatePrescaler, uint16_t SPI_SSO, bool GPIO_as_SS);
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-
+void SPI_wait(int SPIX);
 uint8_t SPI_Send_8bit(uint8_t SPIX, uint8_t data);
 static BYTE send_cmd(BYTE cmd, DWORD arg);
 static bool wait_for_card_ready();
