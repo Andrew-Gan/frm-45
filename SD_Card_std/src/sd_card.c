@@ -26,8 +26,11 @@ void nano_wait(unsigned int n) {
 void SPI_wait(int SPIX){
     if(SPIX == sel_SPI1){
         //check TXE and RXNE flag
-        while(( SPI1->SR & (SPI_SR_TXE | SPI_SR_RXNE)) == 0  )
+        while((( SPI1->SR & (SPI_SR_TXE | SPI_SR_RXNE)) == 0))
             ;
+//        while((( SPI1->SR & ()) == 0))
+//            ;
+
     }
     if(SPIX == sel_SPI2){
          //check TXE and RXNE flag
@@ -205,7 +208,7 @@ void TIM6_DAC_IRQHandler() {
     TIM6->SR &= ~TIM_SR_UIF;
     SD_timer();
 }
-
+bool buf_flag=0;
 uint8_t SPI_Send_8bit(uint8_t SPIX, uint8_t data){
 
     //wait for SPI to be ready
@@ -213,8 +216,16 @@ uint8_t SPI_Send_8bit(uint8_t SPIX, uint8_t data){
 
     //send data to SPI_DR
     if(SPIX == sel_SPI1){
-        SPI1 -> DR = data;
+       *(uint8_t*)&(SPI1) -> DR = data;
     }
+//    if(SPIX == sel_SPI1 && buf_flag == 0){
+//            SPI1 -> DR = data;
+//            buf_flag = 1;
+//        }
+//    if(SPIX == sel_SPI1 && buf_flag == 1){
+//                SPI1 -> DR = data;
+//                buf_flag = 0;
+//		}
 
     if(SPIX == sel_SPI2){
         SPI2 -> DR = data;
@@ -255,7 +266,7 @@ static bool select_card(){
     //dummy clock
     SPI_Send_8bit(sel_SPI1,0xFF);
     //wait for SD card to be ready
-    if(wait_for_card_ready(50)){
+    if(wait_for_card_ready(500)){
         return true;
     }
     deselect_card();
@@ -312,7 +323,7 @@ DSTATUS SD_initialize (){
     uint8_t SPIX = 1;
     uint16_t SPI_MODE = SPI_CR1_MSTR;
     uint16_t SPI_Direction = 0; // 2 line unidirectional data
-    uint16_t SPI_DataSize =  SPI_CR2_DS_0 | SPI_CR2_DS_1 | SPI_CR2_DS_2; //so it set to 8 bit
+    uint16_t SPI_DataSize =  SPI_CR2_DS_0 | SPI_CR2_DS_1 | SPI_CR2_DS_2 |  SPI_CR2_FRXTH; //so it set to 8 bit
     uint16_t SPI_CPOL = 0; //proper setting for SD read
     uint16_t SPI_CPHA = 0; //proper setting for SD read
     uint16_t SPI_NSS = 0; //disable NSS
@@ -326,10 +337,12 @@ DSTATUS SD_initialize (){
 
 
 
-    //send  80 dummy value
+//    send  80 dummy value
     for (int i = 0; i < 10; i++){
+
         SPI_Send_8bit(sel_SPI1,0xFF);
     }
+
 
     BYTE test = send_cmd(CMD0,0);
 //    test = send_cmd(CMD8,0x1AA);
