@@ -1,3 +1,6 @@
+#include "stm32f0xx.h"
+
+
 /* This type MUST be 8 bit */
 typedef unsigned char	BYTE;
 
@@ -13,3 +16,4 @@ typedef unsigned int	UINT;
 /* These types MUST be 32 bit */
 typedef long			LONG;
 typedef unsigned long	DWORD;
+

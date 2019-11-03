@@ -1,3 +1,5 @@
+#include "stm32f0xx.h"
+
 
 //define SD Card Command
 #define CMD0    (0)         /* GO_IDLE_STATE */
@@ -24,23 +26,9 @@
 #define sel_SPI1 1
 #define sel_SPI2 2
 
-#define milisecond 1000000
-#define minute 1000000000
-
-typedef enum {false,true} bool;
-
-///////////////////////////////////////////////////////////////////////////////////////////////
-
-void init_spi(uint8_t SPIX, uint16_t SPI_MODE, uint16_t SPI_Direction,
-uint16_t SPI_DataSize, uint16_t SPI_CPOL, uint16_t SPI_CPHA, uint16_t SPI_NSS,
-uint16_t SPI_BaudRatePrescaler, uint16_t SPI_SSO, bool GPIO_as_SS);
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-void SPI_wait(int SPIX);
-uint8_t SPI_Send_8bit(uint8_t SPIX, uint8_t data);
-static BYTE send_cmd(BYTE cmd, DWORD arg);
-static bool wait_for_card_ready();
-static void deselect_card();
-static bool select_card();
+
+
 DSTATUS SD_initialize ();
