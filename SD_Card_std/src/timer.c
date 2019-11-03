@@ -19,9 +19,9 @@ void init_tim6(volatile uint16_t Prescalar,volatile uint16_t Arr) {
        TIM6->CR1 |= TIM_CR1_CEN;
 }
 
-void countdown_timer(){
+static void countdown_timer(){
     WORD n;
-    n = Timer1;                     /* 1kHz decrement timer stopped at 0 */
+    n = Timer1;                     
     if (n) Timer1 = --n;
     n = Timer2;
     if (n) Timer2 = --n;
@@ -30,4 +30,8 @@ void countdown_timer(){
 void TIM6_DAC_IRQHandler() {
     TIM6->SR &= ~TIM_SR_UIF;
     countdown_timer();
+}
+
+void disable_timer(){
+    TIM6->CR1 &= ~TIM_CR1_CEN;
 }

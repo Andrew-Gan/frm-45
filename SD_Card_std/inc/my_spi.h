@@ -17,7 +17,7 @@ void SPI_wait(int SPIX);
 input: put 0 as default
 function : initialize SPI
 //demo of how to init SPI
-  uint8_t SPIX = 1;
+  uint8_t SPIX = sel_SPI1/sel_SPI2;
   uint16_t SPI_MODE = SPI_CR1_MSTR;
   uint16_t SPI_Direction = 0; // 2 line unidirectional data
   uint16_t SPI_DataSize = SPI_CR2_DS_0 | SPI_CR2_DS_1 | SPI_CR2_DS_2; //so it set to 8 bit
@@ -39,6 +39,6 @@ uint16_t SPI_BaudRatePrescaler, uint16_t SPI_SSO, bool GPIO_as_SS);
 input: SPI1  = selSPI1
        SPI2  = selSPI2
        data = 8 bit data
-function: Send 8 Bit to SPI
+function: Send 8 Bit to selected SPI
 */
 uint8_t SPI_Send_8bit(uint8_t SPIX, uint8_t data);
