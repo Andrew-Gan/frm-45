@@ -28,9 +28,6 @@ void SPI_wait(int SPIX){
         //check TXE and RXNE flag
         while((( SPI1->SR & (SPI_SR_TXE | SPI_SR_RXNE)) == 0))
             ;
-//        while((( SPI1->SR & ()) == 0))
-//            ;
-
     }
     if(SPIX == sel_SPI2){
          //check TXE and RXNE flag
@@ -208,27 +205,27 @@ void TIM6_DAC_IRQHandler() {
     TIM6->SR &= ~TIM_SR_UIF;
     SD_timer();
 }
-bool buf_flag=0;
+
+
 uint8_t SPI_Send_8bit(uint8_t SPIX, uint8_t data){
 
     //wait for SPI to be ready
     SPI_wait(SPIX);
 
-    //send data to SPI_DR
     if(SPIX == sel_SPI1){
-       *(uint8_t*)&(SPI1) -> DR = data;
+        //ptr to first 8 bit of SPI1->DR
+        uint8_t *ptr = (__IO uint8_t *) &(SPI1->DR);
+        // put the data to the pointer
+        *ptr = data;
+
     }
-//    if(SPIX == sel_SPI1 && buf_flag == 0){
-//            SPI1 -> DR = data;
-//            buf_flag = 1;
-//        }
-//    if(SPIX == sel_SPI1 && buf_flag == 1){
-//                SPI1 -> DR = data;
-//                buf_flag = 0;
-//		}
 
     if(SPIX == sel_SPI2){
-        SPI2 -> DR = data;
+        //ptr to first 8 bit of SPI1->DR
+        uint8_t *ptr = (__IO uint8_t *) &(SPI2->DR);
+        // put the data to the pointer
+        *ptr = data;
+
     }
 
     //wait for SPI to be ready
