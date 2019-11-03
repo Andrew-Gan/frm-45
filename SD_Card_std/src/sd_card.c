@@ -110,8 +110,25 @@ DSTATUS SD_initialize (){
         SPI_Send_8bit(sel_SPI1,0xFF);
     }
 
+    ty = 0;
+    if(send_cmd(CMD0,0 == 0x1)){
+        Timer1 = 1000;
+        BYTE test = send_cmd(CMD8, 0x1AA);
+        for(n = 0; n<4; n++){
+            ocr[n] = SPI_Send_8bit(sel_SPI1,0xFF);
+        }
+        if(send_cmd(CMD8, 0x1AA) == 0x1){
+            //receive 32 bit
+            for(n = 0; n<4; n++){
+                ocr[n] = SPI_Send_8bit(sel_SPI1,0xFF);
+            }
+            /* Is the card supports vcc of 2.7-3.6V? */
+            if(ocr[2] == 0x01 && ocr[3] == 0xAA){
 
-    BYTE test = send_cmd(CMD0,0);
+            }
+        }
+
+    }
 
     return 0;
 }
