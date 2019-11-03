@@ -1,0 +1,4 @@
+
+
+
+void lcd_output(const char *s)

@@ -1,0 +1,2285 @@
+16:50:33 **** Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../startup/startup_stm32f0xx.S
+Building file: ../src/ff.c
+Invoking: MCU GCC Compiler
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+Building file: ../src/sd_card.c
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/startup_stm32f0xx.d" -MT"startup/startup_stm32f0xx.o" -o "startup/startup_stm32f0xx.o" "../startup/startup_stm32f0xx.S"
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/ff.d" -MT"src/ff.o" -o "src/ff.o" "../src/ff.c"
+Building file: ../src/system_stm32f0xx.c
+Building file: ../src/syscalls.c
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+Building file: ../Utilities/stm32f0_discovery.c
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+Invoking: MCU GCC Compiler
+Building file: ../StdPeriph_Driver/src/stm32f0xx_adc.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/stm32f0_discovery.d" -MT"Utilities/stm32f0_discovery.o" -o "Utilities/stm32f0_discovery.o" "../Utilities/stm32f0_discovery.c"
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/system_stm32f0xx.d" -MT"src/system_stm32f0xx.o" -o "src/system_stm32f0xx.o" "../src/system_stm32f0xx.c"
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_adc.d" -MT"StdPeriph_Driver/src/stm32f0xx_adc.o" -o "StdPeriph_Driver/src/stm32f0xx_adc.o" "../StdPeriph_Driver/src/stm32f0xx_adc.c"
+Finished building: ../startup/startup_stm32f0xx.S
+ 
+../src/ff.c: In function 'sync_window':
+../src/ff.c:1080:13: warning: implicit declaration of function 'disk_write'; did you mean 'f_write'? [-Wimplicit-function-declaration]
+Building file: ../StdPeriph_Driver/src/stm32f0xx_cec.c
+         if (disk_write(fs->pdrv, fs->win, fs->winsect, 1) == RES_OK) {  /* Write it back into the volume */
+             ^~~~~~~~~~
+             f_write
+../src/ff.c: In function 'move_window':
+../src/ff.c:1107:17: warning: implicit declaration of function 'disk_read'; did you mean 'f_read'? [-Wimplicit-function-declaration]
+             if (disk_read(fs->pdrv, fs->win, sect, 1) != RES_OK) {
+                 ^~~~~~~~~
+                 f_read
+../src/ff.c: In function 'sync_fs':
+../src/ff.c:1148:13: warning: implicit declaration of function 'disk_ioctl' [-Wimplicit-function-declaration]
+         if (disk_ioctl(fs->pdrv, CTRL_SYNC, 0) != RES_OK) res = FR_DISK_ERR;
+             ^~~~~~~~~~
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_cec.d" -MT"StdPeriph_Driver/src/stm32f0xx_cec.o" -o "StdPeriph_Driver/src/stm32f0xx_cec.o" "../StdPeriph_Driver/src/stm32f0xx_cec.c"
+../src/ff.c: In function 'mount_volume':
+../src/ff.c:3400:16: warning: implicit declaration of function 'disk_status' [-Wimplicit-function-declaration]
+         stat = disk_status(fs->pdrv);
+                ^~~~~~~~~~~
+../src/ff.c:3414:12: warning: implicit declaration of function 'disk_initialize' [-Wimplicit-function-declaration]
+     stat = disk_initialize(fs->pdrv);   /* Initialize the physical drive */
+            ^~~~~~~~~~~~~~~
+../src/system_stm32f0xx.c: In function 'SetSysClock':
+../src/system_stm32f0xx.c:273:37: warning: unused variable 'HSEStatus' [-Wunused-variable]
+   __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
+                                     ^~~~~~~~~
+../src/system_stm32f0xx.c:273:17: warning: unused variable 'StartUpCounter' [-Wunused-variable]
+   __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
+                 ^~~~~~~~~~~~~~
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:334:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+In file included from ../src/main.c:7:0:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:42:13: warning: 'send_cmd' declared 'static' but never defined [-Wunused-function]
+ static BYTE send_cmd(BYTE cmd, DWORD arg);
+             ^~~~~~~~
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:43:13: warning: 'wait_for_card_ready' declared 'static' but never defined [-Wunused-function]
+ static bool wait_for_card_ready();
+             ^~~~~~~~~~~~~~~~~~~
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:44:13: warning: 'deselect_card' declared 'static' but never defined [-Wunused-function]
+ static void deselect_card();
+             ^~~~~~~~~~~~~
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:45:13: warning: 'select_card' declared 'static' but never defined [-Wunused-function]
+ static bool select_card();
+             ^~~~~~~~~~~
+Finished building: ../src/system_stm32f0xx.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f0xx_comp.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_comp.d" -MT"StdPeriph_Driver/src/stm32f0xx_comp.o" -o "StdPeriph_Driver/src/stm32f0xx_comp.o" "../StdPeriph_Driver/src/stm32f0xx_comp.c"
+Finished building: ../Utilities/stm32f0_discovery.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f0xx_crc.c
+Finished building: ../src/sd_card.c
+Finished building: ../src/main.c
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_adc.c
+Invoking: MCU GCC Compiler
+ 
+ 
+ 
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+Building file: ../StdPeriph_Driver/src/stm32f0xx_dac.c
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_crc.d" -MT"StdPeriph_Driver/src/stm32f0xx_crc.o" -o "StdPeriph_Driver/src/stm32f0xx_crc.o" "../StdPeriph_Driver/src/stm32f0xx_crc.c"
+Building file: ../StdPeriph_Driver/src/stm32f0xx_dbgmcu.c
+Invoking: MCU GCC Compiler
+Finished building: ../src/syscalls.c
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_cec.c
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_dac.d" -MT"StdPeriph_Driver/src/stm32f0xx_dac.o" -o "StdPeriph_Driver/src/stm32f0xx_dac.o" "../StdPeriph_Driver/src/stm32f0xx_dac.c"
+Building file: ../StdPeriph_Driver/src/stm32f0xx_dma.c
+ 
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+ 
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_dbgmcu.d" -MT"StdPeriph_Driver/src/stm32f0xx_dbgmcu.o" -o "StdPeriph_Driver/src/stm32f0xx_dbgmcu.o" "../StdPeriph_Driver/src/stm32f0xx_dbgmcu.c"
+Invoking: MCU GCC Compiler
+Building file: ../StdPeriph_Driver/src/stm32f0xx_flash.c
+Building file: ../StdPeriph_Driver/src/stm32f0xx_exti.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_dma.d" -MT"StdPeriph_Driver/src/stm32f0xx_dma.o" -o "StdPeriph_Driver/src/stm32f0xx_dma.o" "../StdPeriph_Driver/src/stm32f0xx_dma.c"
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_exti.d" -MT"StdPeriph_Driver/src/stm32f0xx_exti.o" -o "StdPeriph_Driver/src/stm32f0xx_exti.o" "../StdPeriph_Driver/src/stm32f0xx_exti.c"
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_flash.d" -MT"StdPeriph_Driver/src/stm32f0xx_flash.o" -o "StdPeriph_Driver/src/stm32f0xx_flash.o" "../StdPeriph_Driver/src/stm32f0xx_flash.c"
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_comp.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f0xx_gpio.c
+Finished building: ../src/ff.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f0xx_i2c.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_i2c.d" -MT"StdPeriph_Driver/src/stm32f0xx_i2c.o" -o "StdPeriph_Driver/src/stm32f0xx_i2c.o" "../StdPeriph_Driver/src/stm32f0xx_i2c.c"
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_gpio.d" -MT"StdPeriph_Driver/src/stm32f0xx_gpio.o" -o "StdPeriph_Driver/src/stm32f0xx_gpio.o" "../StdPeriph_Driver/src/stm32f0xx_gpio.c"
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_crc.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f0xx_iwdg.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_iwdg.d" -MT"StdPeriph_Driver/src/stm32f0xx_iwdg.o" -o "StdPeriph_Driver/src/stm32f0xx_iwdg.o" "../StdPeriph_Driver/src/stm32f0xx_iwdg.c"
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_dma.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f0xx_misc.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_misc.d" -MT"StdPeriph_Driver/src/stm32f0xx_misc.o" -o "StdPeriph_Driver/src/stm32f0xx_misc.o" "../StdPeriph_Driver/src/stm32f0xx_misc.c"
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_dac.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f0xx_pwr.c
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_exti.c
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_dbgmcu.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+ 
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_pwr.d" -MT"StdPeriph_Driver/src/stm32f0xx_pwr.o" -o "StdPeriph_Driver/src/stm32f0xx_pwr.o" "../StdPeriph_Driver/src/stm32f0xx_pwr.c"
+ 
+Building file: ../StdPeriph_Driver/src/stm32f0xx_rcc.c
+Invoking: MCU GCC Compiler
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_flash.c
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_rcc.d" -MT"StdPeriph_Driver/src/stm32f0xx_rcc.o" -o "StdPeriph_Driver/src/stm32f0xx_rcc.o" "../StdPeriph_Driver/src/stm32f0xx_rcc.c"
+ 
+Building file: ../StdPeriph_Driver/src/stm32f0xx_spi.c
+Invoking: MCU GCC Compiler
+Building file: ../StdPeriph_Driver/src/stm32f0xx_rtc.c
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_spi.d" -MT"StdPeriph_Driver/src/stm32f0xx_spi.o" -o "StdPeriph_Driver/src/stm32f0xx_spi.o" "../StdPeriph_Driver/src/stm32f0xx_spi.c"
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_rtc.d" -MT"StdPeriph_Driver/src/stm32f0xx_rtc.o" -o "StdPeriph_Driver/src/stm32f0xx_rtc.o" "../StdPeriph_Driver/src/stm32f0xx_rtc.c"
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_gpio.c
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_i2c.c
+ 
+ 
+Building file: ../StdPeriph_Driver/src/stm32f0xx_syscfg.c
+Invoking: MCU GCC Compiler
+Building file: ../StdPeriph_Driver/src/stm32f0xx_tim.c
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_syscfg.d" -MT"StdPeriph_Driver/src/stm32f0xx_syscfg.o" -o "StdPeriph_Driver/src/stm32f0xx_syscfg.o" "../StdPeriph_Driver/src/stm32f0xx_syscfg.c"
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_tim.d" -MT"StdPeriph_Driver/src/stm32f0xx_tim.o" -o "StdPeriph_Driver/src/stm32f0xx_tim.o" "../StdPeriph_Driver/src/stm32f0xx_tim.c"
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_iwdg.c
+../StdPeriph_Driver/src/stm32f0xx_rtc.c: In function 'RTC_DeInit':
+../StdPeriph_Driver/src/stm32f0xx_rtc.c:311:17: warning: unused variable 'wutcounter' [-Wunused-variable]
+   __IO uint32_t wutcounter = 0x00;
+                 ^~~~~~~~~~
+ 
+Building file: ../StdPeriph_Driver/src/stm32f0xx_usart.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_usart.d" -MT"StdPeriph_Driver/src/stm32f0xx_usart.o" -o "StdPeriph_Driver/src/stm32f0xx_usart.o" "../StdPeriph_Driver/src/stm32f0xx_usart.c"
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_pwr.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_misc.c
+Building file: ../StdPeriph_Driver/src/stm32f0xx_wwdg.c
+ 
+Invoking: MCU GCC Compiler
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_rcc.c
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f0xx_wwdg.d" -MT"StdPeriph_Driver/src/stm32f0xx_wwdg.o" -o "StdPeriph_Driver/src/stm32f0xx_wwdg.o" "../StdPeriph_Driver/src/stm32f0xx_wwdg.c"
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_syscfg.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_spi.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_rtc.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_usart.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_tim.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f0xx_wwdg.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3196	   1080	    196	   4472	   1178	SD_Card_std.elf
+ 
+16:53:29 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+16:55:01 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+16:56:25 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+16:56:38 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+16:59:08 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+16:59:16 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+17:06:58 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+17:07:25 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+17:07:49 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+17:23:16 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:334:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3196	   1080	    196	   4472	   1178	SD_Card_std.elf
+ 
+17:32:38 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:334:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3200	   1080	    196	   4476	   117c	SD_Card_std.elf
+ 
+17:36:59 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:334:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3200	   1080	    196	   4476	   117c	SD_Card_std.elf
+ 
+17:39:00 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:334:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3200	   1080	    196	   4476	   117c	SD_Card_std.elf
+ 
+17:40:15 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:334:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3200	   1080	    196	   4476	   117c	SD_Card_std.elf
+ 
+18:00:56 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:334:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3200	   1080	    196	   4476	   117c	SD_Card_std.elf
+ 
+18:03:16 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:334:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3192	   1080	    196	   4468	   1174	SD_Card_std.elf
+ 
+18:05:14 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:341:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3220	   1080	    196	   4496	   1190	SD_Card_std.elf
+ 
+18:06:11 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:341:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3204	   1080	    196	   4480	   1180	SD_Card_std.elf
+ 
+18:16:27 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:341:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3220	   1080	    196	   4496	   1190	SD_Card_std.elf
+ 
+18:23:29 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:335:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+../src/sd_card.c: In function 'SPI_Send_8bit':
+../src/sd_card.c:232:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3176	   1080	    196	   4452	   1164	SD_Card_std.elf
+ 
+18:24:47 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:335:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+../src/sd_card.c: In function 'SPI_Send_8bit':
+../src/sd_card.c:232:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3156	   1080	    196	   4432	   1150	SD_Card_std.elf
+ 
+18:25:35 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:335:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3112	   1080	    196	   4388	   1124	SD_Card_std.elf
+ 
+18:26:48 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+At top level:
+../src/sd_card.c:265:13: warning: 'send_cmd' defined but not used [-Wunused-function]
+ static BYTE send_cmd(BYTE cmd, DWORD arg){
+             ^~~~~~~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2508	   1080	    196	   3784	    ec8	SD_Card_std.elf
+ 
+18:29:24 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:335:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3164	   1080	    196	   4440	   1158	SD_Card_std.elf
+ 
+18:30:30 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+At top level:
+../src/sd_card.c:265:13: warning: 'send_cmd' defined but not used [-Wunused-function]
+ static BYTE send_cmd(BYTE cmd, DWORD arg){
+             ^~~~~~~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2508	   1080	    196	   3784	    ec8	SD_Card_std.elf
+ 
+18:30:37 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+18:35:04 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:335:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:317:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:309:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:309:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:309:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:309:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3200	   1080	    196	   4476	   117c	SD_Card_std.elf
+ 
+18:35:16 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+19:00:22 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:338:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:320:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:312:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:312:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:312:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:312:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3220	   1080	    196	   4496	   1190	SD_Card_std.elf
+ 
+19:01:15 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+19:01:44 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:338:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:320:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:312:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:312:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:312:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:312:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3216	   1080	    196	   4492	   118c	SD_Card_std.elf
+ 
+19:02:45 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:338:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:320:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:312:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:312:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:312:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:312:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3200	   1080	    196	   4476	   117c	SD_Card_std.elf
+ 
+19:09:44 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:340:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:321:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:313:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:313:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:313:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:313:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3212	   1080	    196	   4488	   1188	SD_Card_std.elf
+ 
+19:16:53 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:345:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:326:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:318:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:318:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:318:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:318:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3256	   1080	    204	   4540	   11bc	SD_Card_std.elf
+ 
+19:17:10 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:345:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:326:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:318:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:318:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:318:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:318:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3256	   1080	    204	   4540	   11bc	SD_Card_std.elf
+ 
+19:17:43 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+19:20:11 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c:212:9: error: conflicting types for 'SPI_Send_8bit'
+ uint8_t SPI_Send_8bit(uint8_t SPIX, uint16_t data){
+         ^~~~~~~~~~~~~
+In file included from ../src/sd_card.c:4:0:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:41:9: note: previous declaration of 'SPI_Send_8bit' was here
+ uint8_t SPI_Send_8bit(uint8_t SPIX, uint8_t data);
+         ^~~~~~~~~~~~~
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:345:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:326:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:318:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:318:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:318:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:318:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+make: *** [src/sd_card.o] Error 1
+src/subdir.mk:30: recipe for target 'src/sd_card.o' failed
+19:20:32 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/main.c
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:345:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:326:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:318:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:318:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:318:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:318:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+In file included from ../src/main.c:7:0:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:42:13: warning: 'send_cmd' declared 'static' but never defined [-Wunused-function]
+ static BYTE send_cmd(BYTE cmd, DWORD arg);
+             ^~~~~~~~
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:43:13: warning: 'wait_for_card_ready' declared 'static' but never defined [-Wunused-function]
+ static bool wait_for_card_ready();
+             ^~~~~~~~~~~~~~~~~~~
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:44:13: warning: 'deselect_card' declared 'static' but never defined [-Wunused-function]
+ static void deselect_card();
+             ^~~~~~~~~~~~~
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:45:13: warning: 'select_card' declared 'static' but never defined [-Wunused-function]
+ static bool select_card();
+             ^~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3260	   1080	    204	   4544	   11c0	SD_Card_std.elf
+ 
+19:20:37 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+19:22:22 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SPI_Send_8bit':
+../src/sd_card.c:245:13: error: invalid storage class for function 'wait_for_card_ready'
+ static bool wait_for_card_ready(unsigned int timeout){
+             ^~~~~~~~~~~~~~~~~~~
+../src/sd_card.c:255:13: error: invalid storage class for function 'deselect_card'
+ static void deselect_card(){
+             ^~~~~~~~~~~~~
+../src/sd_card.c:263:13: error: invalid storage class for function 'select_card'
+ static bool select_card(){
+             ^~~~~~~~~~~
+../src/sd_card.c:276:13: error: invalid storage class for function 'send_cmd'
+ static BYTE send_cmd(BYTE cmd, DWORD arg){
+             ^~~~~~~~
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:347:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:328:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:320:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:320:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:320:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:320:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+../src/sd_card.c: In function 'SPI_Send_8bit':
+../src/sd_card.c:351:1: error: expected declaration or statement at end of input
+ }
+ ^
+In file included from ../src/sd_card.c:4:0:
+../src/sd_card.c: At top level:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:42:13: warning: 'send_cmd' declared 'static' but never defined [-Wunused-function]
+ static BYTE send_cmd(BYTE cmd, DWORD arg);
+src/subdir.mk:30: recipe for target 'src/sd_card.o' failed
+             ^~~~~~~~
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:43:13: warning: 'wait_for_card_ready' declared 'static' but never defined [-Wunused-function]
+ static bool wait_for_card_ready();
+             ^~~~~~~~~~~~~~~~~~~
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:44:13: warning: 'deselect_card' declared 'static' but never defined [-Wunused-function]
+ static void deselect_card();
+             ^~~~~~~~~~~~~
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:45:13: warning: 'select_card' declared 'static' but never defined [-Wunused-function]
+ static bool select_card();
+             ^~~~~~~~~~~
+../src/sd_card.c: In function 'SPI_Send_8bit':
+../src/sd_card.c:351:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+../src/sd_card.c:319:9: warning: 'SD_initialize' defined but not used [-Wunused-function]
+ DSTATUS SD_initialize (){
+         ^~~~~~~~~~~~~
+make: *** [src/sd_card.o] Error 1
+19:22:39 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:347:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:328:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:320:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:320:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:320:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:320:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3220	   1080	    204	   4504	   1198	SD_Card_std.elf
+ 
+19:32:38 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/main.c
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/sd_card.c: In function 'SPI_Send_8bit':
+../src/sd_card.c:219:18: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+                 *(uint8_t*)SPI1 -> DR = data;
+                  ^
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:347:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:328:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:320:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:320:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:320:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:320:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+In file included from ../src/main.c:7:0:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:42:13: warning: 'send_cmd' declared 'static' but never defined [-Wunused-function]
+ static BYTE send_cmd(BYTE cmd, DWORD arg);
+             ^~~~~~~~
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:43:13: warning: 'wait_for_card_ready' declared 'static' but never defined [-Wunused-function]
+ static bool wait_for_card_ready();
+             ^~~~~~~~~~~~~~~~~~~
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:44:13: warning: 'deselect_card' declared 'static' but never defined [-Wunused-function]
+ static void deselect_card();
+             ^~~~~~~~~~~~~
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/sd_card.h:45:13: warning: 'select_card' declared 'static' but never defined [-Wunused-function]
+ static bool select_card();
+             ^~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3204	   1080	    204	   4488	   1188	SD_Card_std.elf
+ 
+19:34:38 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SPI_Send_8bit':
+../src/sd_card.c:219:37: error: lvalue required as left operand of assignment
+                 (uint8_t)SPI1 -> DR = data;
+                                     ^
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:347:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:328:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:320:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:320:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:320:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:320:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+src/subdir.mk:30: recipe for target 'src/sd_card.o' failed
+make: *** [src/sd_card.o] Error 1
+19:37:36 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:347:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:328:14: warning: unused variable 'SPI_CPHA' [-Wunused-variable]
+     uint16_t SPI_CPHA = 0; //proper setting for SD read
+              ^~~~~~~~
+../src/sd_card.c:320:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:320:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:320:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:320:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3204	   1080	    204	   4488	   1188	SD_Card_std.elf
+ 
+19:37:49 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+14:54:29 **** Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/main.c
+Building file: ../src/my_spi.c
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+Building file: ../src/timer.c
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/my_spi.d" -MT"src/my_spi.o" -o "src/my_spi.o" "../src/my_spi.c"
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/timer.d" -MT"src/timer.o" -o "src/timer.o" "../src/timer.c"
+../src/my_spi.c: In function 'SPI_Send_8bit':
+../src/my_spi.c:183:24: warning: initialization discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         uint8_t *ptr = (__IO uint8_t *) &(SPI1->DR);
+                        ^
+../src/my_spi.c:191:24: warning: initialization discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+src/subdir.mk:36: recipe for target 'src/sd_card.o' failed
+         uint8_t *ptr = (__IO uint8_t *) &(SPI2->DR);
+                        ^
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:115:10: error: redefinition of 'test'
+     BYTE test = send_cmd(CMD8,0x1AA);
+          ^~~~
+../src/sd_card.c:114:10: note: previous definition of 'test' was here
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:115:10: warning: unused variable 'test' [-Wunused-variable]
+     BYTE test = send_cmd(CMD8,0x1AA);
+          ^~~~
+../src/sd_card.c:85:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:85:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:85:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:85:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+In file included from ../src/sd_card.c:8:0:
+../src/sd_card.c: At top level:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/timer.h:9:13: warning: 'countdown_timer' declared 'static' but never defined [-Wunused-function]
+ static void countdown_timer();
+             ^~~~~~~~~~~~~~~
+make: *** [src/sd_card.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../src/timer.c
+ 
+Finished building: ../src/my_spi.c
+ 
+Finished building: ../src/main.c
+ 
+14:54:40 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:114:10: warning: variable 'test' set but not used [-Wunused-but-set-variable]
+     BYTE test = send_cmd(CMD0,0);
+          ^~~~
+../src/sd_card.c:85:22: warning: unused variable 'ocr' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                      ^~~
+../src/sd_card.c:85:18: warning: unused variable 'ty' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:85:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+../src/sd_card.c:85:10: warning: unused variable 'n' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+          ^
+In file included from ../src/sd_card.c:8:0:
+../src/sd_card.c: At top level:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/timer.h:9:13: warning: 'countdown_timer' declared 'static' but never defined [-Wunused-function]
+ static void countdown_timer();
+             ^~~~~~~~~~~~~~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3312	   1080	    196	   4588	   11ec	SD_Card_std.elf
+ 
+15:00:26 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:116:14: warning: unused variable 'test' [-Wunused-variable]
+         BYTE test = send_cmd(CMD8, 0x1AA);
+              ^~~~
+../src/sd_card.c:85:18: warning: variable 'ty' set but not used [-Wunused-but-set-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:85:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+In file included from ../src/sd_card.c:8:0:
+../src/sd_card.c: At top level:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/timer.h:9:13: warning: 'countdown_timer' declared 'static' but never defined [-Wunused-function]
+ static void countdown_timer();
+             ^~~~~~~~~~~~~~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3452	   1080	    196	   4728	   1278	SD_Card_std.elf
+ 
+15:01:13 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:85:18: warning: variable 'ty' set but not used [-Wunused-but-set-variable]
+     BYTE n, cmd, ty, ocr[4];
+                  ^~
+../src/sd_card.c:85:13: warning: unused variable 'cmd' [-Wunused-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+In file included from ../src/sd_card.c:8:0:
+../src/sd_card.c: At top level:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/timer.h:9:13: warning: 'countdown_timer' declared 'static' but never defined [-Wunused-function]
+ static void countdown_timer();
+             ^~~~~~~~~~~~~~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3384	   1080	    196	   4660	   1234	SD_Card_std.elf
+ 
+15:26:04 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:149:5: warning: implicit declaration of function 'deselect'; did you mean 'deselect_card'? [-Wimplicit-function-declaration]
+     deselect();
+     ^~~~~~~~
+     deselect_card
+In file included from ../src/sd_card.c:8:0:
+../src/sd_card.c: At top level:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/timer.h:9:13: warning: 'countdown_timer' declared 'static' but never defined [-Wunused-function]
+ static void countdown_timer();
+             ^~~~~~~~~~~~~~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+src/sd_card.o: In function `SD_initialize':
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug/../src/sd_card.c:149: undefined reference to `deselect'
+makefile:36: recipe for target 'SD_Card_std.elf' failed
+collect2: error: ld returned 1 exit status
+make: *** [SD_Card_std.elf] Error 1
+15:26:34 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+In file included from ../src/sd_card.c:8:0:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/timer.h:9:13: warning: 'countdown_timer' declared 'static' but never defined [-Wunused-function]
+ static void countdown_timer();
+             ^~~~~~~~~~~~~~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3716	   1088	    204	   5008	   1390	SD_Card_std.elf
+ 
+15:27:35 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:119:14: warning: unused variable 'test' [-Wunused-variable]
+         BYTE test = send_cmd(CMD8, 0x1AA);
+              ^~~~
+In file included from ../src/sd_card.c:8:0:
+../src/sd_card.c: At top level:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/timer.h:9:13: warning: 'countdown_timer' declared 'static' but never defined [-Wunused-function]
+ static void countdown_timer();
+             ^~~~~~~~~~~~~~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3736	   1088	    204	   5028	   13a4	SD_Card_std.elf
+ 
+15:31:34 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+In file included from ../src/sd_card.c:8:0:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/timer.h:9:13: warning: 'countdown_timer' declared 'static' but never defined [-Wunused-function]
+ static void countdown_timer();
+             ^~~~~~~~~~~~~~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3716	   1088	    204	   5008	   1390	SD_Card_std.elf
+ 
+15:33:34 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+In file included from ../src/sd_card.c:8:0:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/timer.h:9:13: warning: 'countdown_timer' declared 'static' but never defined [-Wunused-function]
+ static void countdown_timer();
+             ^~~~~~~~~~~~~~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3716	   1088	    204	   5008	   1390	SD_Card_std.elf
+ 
+15:34:01 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:118:14: warning: unused variable 'test' [-Wunused-variable]
+         BYTE test = send_cmd(CMD8, 0x1AA);
+              ^~~~
+In file included from ../src/sd_card.c:8:0:
+../src/sd_card.c: At top level:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/timer.h:9:13: warning: 'countdown_timer' declared 'static' but never defined [-Wunused-function]
+ static void countdown_timer();
+             ^~~~~~~~~~~~~~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3736	   1088	    204	   5028	   13a4	SD_Card_std.elf
+ 
+15:34:29 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+In file included from ../src/sd_card.c:8:0:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/timer.h:9:13: warning: 'countdown_timer' declared 'static' but never defined [-Wunused-function]
+ static void countdown_timer();
+             ^~~~~~~~~~~~~~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3724	   1088	    204	   5016	   1398	SD_Card_std.elf
+ 
+15:38:27 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+In file included from ../src/sd_card.c:8:0:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/timer.h:9:13: warning: 'countdown_timer' declared 'static' but never defined [-Wunused-function]
+ static void countdown_timer();
+             ^~~~~~~~~~~~~~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3740	   1088	    204	   5032	   13a8	SD_Card_std.elf
+ 
+15:39:08 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+In file included from ../src/sd_card.c:8:0:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/timer.h:9:13: warning: 'countdown_timer' declared 'static' but never defined [-Wunused-function]
+ static void countdown_timer();
+             ^~~~~~~~~~~~~~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3748	   1088	    204	   5040	   13b0	SD_Card_std.elf
+ 
+17:04:24 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/main.c
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+In file included from ../src/sd_card.c:8:0:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/timer.h:9:13: warning: 'countdown_timer' declared 'static' but never defined [-Wunused-function]
+ static void countdown_timer();
+             ^~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3824	   1088	    204	   5116	   13fc	SD_Card_std.elf
+ 
+17:04:40 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+17:40:29 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3824	   1088	    204	   5116	   13fc	SD_Card_std.elf
+ 
+17:41:36 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'SD_initialize':
+../src/sd_card.c:87:13: warning: variable 'cmd' set but not used [-Wunused-but-set-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+In file included from ../src/sd_card.c:8:0:
+../src/sd_card.c: At top level:
+/home/shay/a/lau55/frm-45/SD_Card_std/inc/timer.h:9:13: warning: 'countdown_timer' declared 'static' but never defined [-Wunused-function]
+ static void countdown_timer();
+             ^~~~~~~~~~~~~~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3808	   1088	    204	   5100	   13ec	SD_Card_std.elf
+ 
+17:43:30 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+17:44:43 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+17:46:44 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+17:47:26 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+17:49:14 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+17:49:41 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+17:51:05 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+18:09:27 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/main.c
+Building file: ../src/oled.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/oled.d" -MT"src/oled.o" -o "src/oled.o" "../src/oled.c"
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DSTATUS'
+  DSTATUS Stat = SD_initialize();
+  ^~~~~~~
+../src/oled.c: In function 'generic_lcd_startup':
+../src/oled.c:18:5: warning: implicit declaration of function 'spi_cmd' [-Wimplicit-function-declaration]
+     spi_cmd(0x38);  // 0011 NF00 N=1, F=0: two lines
+     ^~~~~~~
+../src/oled.c: At top level:
+../src/oled.c:26:6: warning: conflicting types for 'spi_cmd'
+ void spi_cmd(char b) {
+      ^~~~~~~
+../src/oled.c:18:5: note: previous implicit declaration of 'spi_cmd' was here
+     spi_cmd(0x38);  // 0011 NF00 N=1, F=0: two lines
+     ^~~~~~~
+src/subdir.mk:39: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../src/oled.c
+ 
+18:09:55 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+Building file: ../src/oled.c
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/oled.d" -MT"src/oled.o" -o "src/oled.o" "../src/oled.c"
+../src/main.c: In function 'main':
+../src/main.c:15:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DSTATUS'
+  DSTATUS Stat = SD_initialize();
+  ^~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:39: recipe for target 'src/main.o' failed
+make: *** Waiting for unfinished jobs....
+Finished building: ../src/oled.c
+ 
+18:10:13 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4488	   1088	    204	   5780	   1694	SD_Card_std.elf
+ 
+18:10:34 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+18:10:40 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+18:10:46 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+18:11:20 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+18:17:10 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/main.c
+Building file: ../src/oled.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/oled.d" -MT"src/oled.o" -o "src/oled.o" "../src/oled.c"
+../src/oled.c: In function 'lcd_output':
+../src/oled.c:112:22: warning: passing argument 1 of 'nondma_display1' makes pointer from integer without a cast [-Wint-conversion]
+      nondma_display1(s[offset]);
+                      ^
+../src/oled.c:88:6: note: expected 'const char *' but argument is of type 'char'
+ void nondma_display1(const char *s) {
+      ^~~~~~~~~~~~~~~
+../src/oled.c: At top level:
+../src/oled.c:120:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+src/subdir.mk:39: recipe for target 'src/oled.o' failed
+make: *** [src/oled.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../src/main.c
+ 
+18:17:23 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/oled.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/oled.d" -MT"src/oled.o" -o "src/oled.o" "../src/oled.c"
+../src/oled.c:120:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+src/subdir.mk:39: recipe for target 'src/oled.o' failed
+make: *** [src/oled.o] Error 1
+18:17:53 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/oled.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/oled.d" -MT"src/oled.o" -o "src/oled.o" "../src/oled.c"
+Finished building: ../src/oled.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4500	   1088	    204	   5792	   16a0	SD_Card_std.elf
+ 
+18:18:08 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/oled.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/oled.d" -MT"src/oled.o" -o "src/oled.o" "../src/oled.c"
+Finished building: ../src/oled.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4500	   1088	    204	   5792	   16a0	SD_Card_std.elf
+ 
+18:18:17 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/oled.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/oled.d" -MT"src/oled.o" -o "src/oled.o" "../src/oled.c"
+Finished building: ../src/oled.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4500	   1088	    204	   5792	   16a0	SD_Card_std.elf
+ 
+18:18:38 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/oled.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/oled.d" -MT"src/oled.o" -o "src/oled.o" "../src/oled.c"
+Finished building: ../src/oled.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4500	   1088	    204	   5792	   16a0	SD_Card_std.elf
+ 
+18:18:51 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/oled.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/oled.d" -MT"src/oled.o" -o "src/oled.o" "../src/oled.c"
+Finished building: ../src/oled.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4500	   1088	    204	   5792	   16a0	SD_Card_std.elf
+ 
+18:19:25 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4508	   1088	    204	   5800	   16a8	SD_Card_std.elf
+ 
+18:20:47 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/lau55/frm-45/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/lau55/frm-45/SD_Card_std/Utilities" -I"/home/shay/a/lau55/frm-45/SD_Card_std/StdPeriph_Driver/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/inc" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/device" -I"/home/shay/a/lau55/frm-45/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/lau55/frm-45/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4512	   1088	    204	   5804	   16ac	SD_Card_std.elf
+ 

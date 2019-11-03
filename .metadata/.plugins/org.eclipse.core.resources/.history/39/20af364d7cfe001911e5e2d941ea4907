@@ -141,11 +141,11 @@ DSTATUS SD_initialize (){
         	  else{
         		  ty = CT_MMC; cmd = CMD1;
         	  }
-        	  test = send_cmd(CMD58, 0);
+        	  test = send_cmd(cmd, 0);
         	  while (Timer1 && test) ;
         	  test = send_cmd(CMD16, 512);
         	  if ((!Timer1 || test) != 0)	/* Set block length: 512 */
-        	      ty = 0;
+        	  		ty = 0;
         }
 
 

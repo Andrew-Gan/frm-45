@@ -14,7 +14,7 @@ int main(void)
 
 	DSTATUS Stat = SD_initialize();
 
-
+	while(1){
 	if (Stat == STA_NOINIT){
 
 	}
@@ -24,8 +24,8 @@ int main(void)
 	if(Stat == STA_PROTECT ){
 
 	}
-	char str[] = "  Successfully Initialize SD      ";
+	char str[] = "Successfully Initialize SD";
 		lcd_output(str);
-
+	}
 
 }

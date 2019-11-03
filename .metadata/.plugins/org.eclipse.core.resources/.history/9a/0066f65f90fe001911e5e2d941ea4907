@@ -24,7 +24,7 @@ int main(void)
 	if(Stat == STA_PROTECT ){
 
 	}
-	char str[] = "  Successfully Initialize SD      ";
+	char str[] = "Successfully Initialize SD";
 		lcd_output(str);
 
 
