@@ -23,8 +23,6 @@
 #define CMD55   (55)        /* APP_CMD */
 #define CMD58   (58)        /* READ_OCR */
 
-#define sel_SPI1 1
-#define sel_SPI2 2
 
 
 

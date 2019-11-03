@@ -2,6 +2,8 @@
 #include "int.h"
 #include <stdbool.h>
 
+#define sel_SPI1 1
+#define sel_SPI2 2
 
 /*
 input: int SPI1  = selSPI1

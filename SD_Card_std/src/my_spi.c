@@ -1,6 +1,5 @@
 #include "stm32f0xx.h"
-#include "diskio.h"
-#include "sd_card.h"
+#include "my_spi.h"
 #include "stm32f0_discovery.h"
 #include "int.h"
 #include <stdbool.h>
