@@ -16,5 +16,6 @@ Stepper and Servo Motors
 * [How to read GCode](https://makezine.com/2016/10/24/get-to-know-your-cnc-how-to-read-g-code/?fbclid=IwAR3-w1awEFc9UalxPZxf2Twn3zoppbnQXDNl3gHNShbNhc7IxlubZtNi5JA)
 * [Gcode Reference](https://www.cnccookbook.com/g-code-m-code-reference-list-cnc-mills/)
 * [Another website about how to make gcode](https://www.marginallyclever.com/2013/08/how-to-build-an-2-axis-arduino-cnc-gcode-interpreter/?fbclid=IwAR2Cuwl6wh2F5Wqw8JK4fef5dCa7CKCwGwoWh0Y8hn-iv6d_DvxPZTSHs24)
+* [Bresenham's line algorithm to draw a line between 2 points] https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm
 
 
