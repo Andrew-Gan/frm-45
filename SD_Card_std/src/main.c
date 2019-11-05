@@ -6,6 +6,7 @@
 #include <string.h>
 #include "sd_card.h"
 #include "oled.h"
+#include "timer.h"
 
 
 int main(void)
@@ -25,7 +26,9 @@ int main(void)
 
 	}
 	char str[] = "  Successfully Initialize SD      ";
+		Timer1 = 10 * SECOND;
 		lcd_output(str);
+
 
 
 }

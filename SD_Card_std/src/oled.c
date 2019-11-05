@@ -2,25 +2,27 @@
 #include "stm32f0_discovery.h"
 #include <stdint.h>
 #include <stdio.h>
+#include "my_spi.h"
+#include "timer.h"
 #include "oled.h"
 
 //=========================================================================
 // An inline assembly language version of nano_wait.
 //=========================================================================
-void nano_wait(unsigned int n) {
+static void nano_wait(unsigned int n) {
     asm(    "        mov r0,%0\n"
             "repeat: sub r0,#83\n"
             "        bgt repeat\n" : : "r"(n) : "r0", "cc");
 }
 
-void spi_cmd(char b) {
+static void spi_cmd(char b) {
     // Your code goes here.
     while ( (SPI2->SR & SPI_SR_TXE) == 0 );
     SPI2->DR = b;
 
 }
 
-void generic_lcd_startup(void) {
+static void generic_lcd_startup(void) {
     nano_wait(100000000); // Give it 100ms to initialize
     spi_cmd(0x38);  // 0011 NF00 N=1, F=0: two lines
     spi_cmd(0x0c);  // 0000 1DCB: display on, no cursor, no blink
@@ -32,7 +34,7 @@ void generic_lcd_startup(void) {
 
 
 
-void spi_data(char b) {
+static void spi_data(char b) {
     // Your code goes here.
     while ( (SPI2->SR & SPI_SR_TXE) == 0 );
     SPI2->DR = 0x200 + b;
@@ -47,7 +49,7 @@ void spi_data(char b) {
 //procedures for the LCD by calling
 //generic_lcd_startup()
 //.
-void spi_init_lcd(void) {
+static void spi_init_lcd(void) {
     // Your code goes here.
 
     //enable clock for SPI and GPIOB
@@ -85,7 +87,7 @@ void spi_init_lcd(void) {
 
 }
 
-void nondma_display1(const char *s) {
+static void nondma_display1(const char *s) {
     // put the cursor on the beginning of the first line (offset 0).
     spi_cmd(0x80 + 0);
     int x;
@@ -103,12 +105,9 @@ void lcd_output(const char *s) {
     // Initialize the display.
 	spi_init_lcd();
     // Write text.
-
-
 	int offset = 0;
 
-
-    while(1) {
+    while(Timer1) {
     	nondma_display1(&s[offset]);
             if (offset == 30) {offset = 0;}
             offset++;
