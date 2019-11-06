@@ -8,7 +8,7 @@ Stepper and Servo Motors
 ## Used Pins
 * **PA8** - _servomotor_  
 * **PA4-7** - _sd card reader_
-* **PA12-15**  - _OLED display_
+* **PB12-15**  - _OLED display_
 * **PA1-PA2**  - _EXTI interrupt_
 
 ## References
