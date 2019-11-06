@@ -9,7 +9,7 @@ Stepper and Servo Motors
 * **PA8** - _servomotor_  
 * **PA4-7** - _sd card reader_
 * **PA12-15**  - _OLED display_
-
+* **PA1-PA2**  - _EXTI interrupt_
 
 ## References
 * [CoreXY CNC Plotter](https://www.instructables.com/id/CoreXY-CNC-Plotter/?fbclid=IwAR0pwp5_IWx3ZKXX_-JnrqQA2Jc5w_0K_mVkKk8bpvbu7aeOSSTUAUPy2AY) 
