@@ -25,10 +25,12 @@ int main(void)
 	if(Stat == STA_PROTECT ){
 
 	}
-	char str[] = "  Successfully Initialize SD      ";
-		Timer1 = 10 * SECOND;
-		lcd_output(str);
-
+	char initialize[] = "    Successfully Initialize SD Card";
+		Timer1 = 5 * SECOND;
+		lcd_output(initialize,35);
+	char read[] = "     Reading SD Card...     ";
+	    Timer1 = 10 * SECOND;
+	    lcd_output(read,25);
 
 
 }

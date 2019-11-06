@@ -30,6 +30,7 @@ static void generic_lcd_startup(void) {
     nano_wait(6200000); // clear takes 6.2ms to complete
     spi_cmd(0x02);  // put the cursor in the home position
     spi_cmd(0x06);  // 0000 01IS: set display to increment
+    spi_cmd(0x80 + 0); // put the cursor on the beginning of the first line (offset 0).
 }
 
 
@@ -88,8 +89,8 @@ static void spi_init_lcd(void) {
 }
 
 static void nondma_display1(const char *s) {
-    // put the cursor on the beginning of the first line (offset 0).
-    spi_cmd(0x80 + 0);
+
+    spi_cmd(0x80 + 0); // put the cursor on the beginning of the first line (offset 0).
     int x;
     for(x=0; x<16; x+=1)
         if (s[x])
@@ -100,19 +101,19 @@ static void nondma_display1(const char *s) {
     	spi_data(' ');
 }
 
-void lcd_output(const char *s) {
+void lcd_output(const char *s, int final_offset) {
 
     // Initialize the display.
 	spi_init_lcd();
     // Write text.
 	int offset = 0;
-
     while(Timer1) {
-    	nondma_display1(&s[offset]);
-            if (offset == 30) {offset = 0;}
-            offset++;
-            nano_wait(100000000);
-
+        if(offset > final_offset){
+            offset = 0;
         }
+    	nondma_display1(&s[offset]);
+    	offset++;
+    	nano_wait(100000000);
+    }
 }
 
