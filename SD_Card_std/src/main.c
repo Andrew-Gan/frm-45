@@ -35,7 +35,7 @@ int main(void)
 
     FRESULT fresult = f_mount(&fs, "", 0);
      fresult = f_getfree("", &fre_clust, &pfs);
-//    BYTE test = disk_initialize(0);
+    //BYTE test = disk_initialize(0);
 
     total = (uint32_t)((pfs->n_fatent - 2) * pfs->csize * 0.5);
     printf("%d",total);

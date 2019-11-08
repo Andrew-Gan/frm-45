@@ -289,9 +289,10 @@ DSTATUS disk_initialize (BYTE drv){
     }
 
     ty = 0;
-    if(send_cmd(CMD0,0) == 1){
+    BYTE test = send_cmd(CMD0,0);
+    if(test == 1){
         Timer1 = 1000;
-        BYTE test = send_cmd(CMD8, 0x1AA);
+        test = send_cmd(CMD8, 0x1AA);
         if(test == 1){
 
             //receive 32 bit
@@ -301,10 +302,12 @@ DSTATUS disk_initialize (BYTE drv){
             if(ocr[2] == 1 && ocr[3] == 0xAA){
                 test = send_cmd(ACMD41, 1UL << 30);
                 while (Timer1 && test){
-                test = send_cmd(ACMD41, 1UL << 30);
+                    test = send_cmd(ACMD41, 1UL << 30);
+                    if(Timer1 == 0) {return 1;}
                 }
                 //finish the initialization process
-            	if((Timer1 && send_cmd(CMD58, 0)) == 0){              //read OCR
+                test = send_cmd(CMD58, 0);
+            	if((Timer1 && test) == 0){              //read OCR
             		//receive 32 bit
                     for(n = 0; n<4; n++){  ocr[n] = SPI_Send_8bit(sel_SPI1,0xFF);}
                     ty = (ocr[0] & 0x40) ? (CT_SD2| CT_BLOCK) : CT_SD2;
