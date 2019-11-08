@@ -1070,48 +1070,49 @@ static void clear_lock (    /* Clear lock entries of the volume */
 /*-----------------------------------------------------------------------*/
 #if !FF_FS_READONLY
 static FRESULT sync_window (    /* Returns FR_OK or FR_DISK_ERR */
-    FATFS* fs           /* Filesystem object */
+   FATFS* fs           /* Filesystem object */
 )
 {
-    FRESULT res = FR_OK;
+   FRESULT res = FR_OK;
 
 
-    if (fs->wflag) {    /* Is the disk access window dirty? */
-        if (disk_write(fs->pdrv, fs->win, fs->winsect, 1) == RES_OK) {  /* Write it back into the volume */
-            fs->wflag = 0;  /* Clear window dirty flag */
-            if (fs->winsect - fs->fatbase < fs->fsize) {    /* Is it in the 1st FAT? */
-                if (fs->n_fats == 2) disk_write(fs->pdrv, fs->win, fs->winsect + fs->fsize, 1); /* Reflect it to 2nd FAT if needed */
-            }
-        } else {
-            res = FR_DISK_ERR;
-        }
-    }
-    return res;
+   if (fs->wflag) {    /* Is the disk access window dirty? */
+       if (disk_write(fs->pdrv, fs->win, fs->winsect, 1) == RES_OK) {  /* Write it back into the volume */
+           fs->wflag = 0;  /* Clear window dirty flag */
+           if (fs->winsect - fs->fatbase < fs->fsize) {    /* Is it in the 1st FAT? */
+               if (fs->n_fats == 2) disk_write(fs->pdrv, fs->win, fs->winsect + fs->fsize, 1); /* Reflect it to 2nd FAT if needed */
+           }
+       } else {
+           res = FR_DISK_ERR;
+       }
+   }
+   return res;
 }
 #endif
 
 
 static FRESULT move_window (    /* Returns FR_OK or FR_DISK_ERR */
-    FATFS* fs,      /* Filesystem object */
-    LBA_t sect      /* Sector LBA to make appearance in the fs->win[] */
+   FATFS* fs,      /* Filesystem object */
+   LBA_t sect      /* Sector LBA to make appearance in the fs->win[] */
 )
 {
-    FRESULT res = FR_OK;
+   FRESULT res = FR_OK;
 
 
-    if (sect != fs->winsect) {  /* Window offset changed? */
+   if (sect != fs->winsect) {  /* Window offset changed? */
 #if !FF_FS_READONLY
-        res = sync_window(fs);      /* Flush the window */
+       res = sync_window(fs);      /* Flush the window */
 #endif
-        if (res == FR_OK) {         /* Fill sector window with new data */
-            if (disk_read(fs->pdrv, fs->win, sect, 1) != RES_OK) {
-                sect = (LBA_t)0 - 1;    /* Invalidate window if read data is not valid */
-                res = FR_DISK_ERR;
-            }
-            fs->winsect = sect;
-        }
-    }
-    return res;
+       if (res == FR_OK) {         /* Fill sector window with new data */
+           BYTE test = disk_read(fs->pdrv, fs->win, sect, 1);
+           if (disk_read(fs->pdrv, fs->win, sect, 1) != RES_OK) {
+               sect = (LBA_t)0 - 1;    /* Invalidate window if read data is not valid */
+               res = FR_DISK_ERR;
+           }
+           fs->winsect = sect;
+       }
+   }
+   return res;
 }
 
 

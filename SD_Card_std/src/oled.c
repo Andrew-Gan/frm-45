@@ -113,7 +113,8 @@ void lcd_output(const char *s, int final_offset) {
         }
     	nondma_display1(&s[offset]);
     	offset++;
-    	nano_wait(100000000);
+    	Timer2 = 1000;
+    	while(Timer2);
     }
 }
 
