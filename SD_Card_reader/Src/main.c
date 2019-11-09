@@ -24,7 +24,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "fatfs_sd.h"
+#include "string.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -62,6 +63,41 @@ static void MX_USART1_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+FATFS fs;  // file system
+FIL fil;  // file
+FRESULT fresult;  // to store the result
+char buffer[1024]; // to store data
+
+UINT br, bw;   // file read/write count
+
+/* capacity related variables */
+FATFS *pfs;
+DWORD fre_clust;
+uint32_t total, free_space;
+
+
+/* to send the data to the uart */
+void send_uart (char *string)
+{
+	uint8_t len = strlen (string);
+	HAL_UART_Transmit(&huart1, (uint8_t *) string, len, 2000);  // transmit in blocking mode
+}
+
+/* to find the size of data in the buffer */
+int bufsize (char *buf)
+{
+	int i=0;
+	while (*buf++ != '\0') i++;
+	return i;
+}
+
+void bufclear (void)  // clear buffer
+{
+	for (int i=0; i<1024; i++)
+	{
+		buffer[i] = '\0';
+	}
+}
 
 /* USER CODE END 0 */
 
@@ -99,6 +135,10 @@ int main(void)
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
 
+  /* Mount SD Card */
+      fresult = f_mount(&fs, "", 0);
+      if (fresult != FR_OK) send_uart ("error in mounting SD CARD...\n");
+      else send_uart("SD CARD mounted successfully...\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -244,14 +284,14 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(SD_CS_GPIO_Port, SD_CS_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pin : PC4 */
-  GPIO_InitStruct.Pin = GPIO_PIN_4;
+  /*Configure GPIO pin : SD_CS_Pin */
+  GPIO_InitStruct.Pin = SD_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
+  HAL_GPIO_Init(SD_CS_GPIO_Port, &GPIO_InitStruct);
 
 }
 
