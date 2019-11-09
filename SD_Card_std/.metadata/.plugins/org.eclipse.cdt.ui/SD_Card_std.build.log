@@ -1,0 +1,6 @@
+02:16:51 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+
+02:16:51 Build Finished (took 317ms)
+

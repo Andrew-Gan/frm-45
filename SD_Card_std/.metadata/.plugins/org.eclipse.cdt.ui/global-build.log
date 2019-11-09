@@ -1,0 +1,180 @@
+01:53:06 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+01:53:08 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+01:54:17 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+01:54:38 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+01:56:02 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+01:56:52 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+01:59:34 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+01:59:54 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+02:00:15 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+02:03:03 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/lau/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/lau/SD_Card_std/Utilities" -I"/home/lau/SD_Card_std/StdPeriph_Driver/inc" -I"/home/lau/SD_Card_std/inc" -I"/home/lau/SD_Card_std/CMSIS/device" -I"/home/lau/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:69:13: warning: variable 'res' set but not used [-Wunused-but-set-variable]
+     FRESULT res = f_mount(&pfs, "", 0);
+             ^~~
+../src/main.c:65:32: warning: variable 'tot_sect' set but not used [-Wunused-but-set-variable]
+     DWORD fre_clust, fre_sect, tot_sect;
+                                ^~~~~~~~
+../src/main.c:65:22: warning: variable 'fre_sect' set but not used [-Wunused-but-set-variable]
+     DWORD fre_clust, fre_sect, tot_sect;
+                      ^~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/lau/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+  26136	   1112	    468	  27716	   6c44	SD_Card_std.elf
+ 
+02:04:33 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+02:04:50 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+02:07:01 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/ff.c
+Invoking: MCU GCC Compiler
+/home/lau/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/lau/SD_Card_std/Utilities" -I"/home/lau/SD_Card_std/StdPeriph_Driver/inc" -I"/home/lau/SD_Card_std/inc" -I"/home/lau/SD_Card_std/CMSIS/device" -I"/home/lau/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/ff.d" -MT"src/ff.o" -o "src/ff.o" "../src/ff.c"
+../src/ff.c: In function 'sync_window':
+../src/ff.c:1080:18: warning: implicit declaration of function 'disk_write'; did you mean 'f_write'? [-Wimplicit-function-declaration]
+   FRESULT test = disk_write(fs->pdrv, fs->win, fs->winsect, 1);
+                  ^~~~~~~~~~
+                  f_write
+../src/ff.c:1081:12: warning: comparison between 'FRESULT {aka enum <anonymous>}' and 'enum <anonymous>' [-Wenum-compare]
+   if (test == RES_OK) { /* Write it back into the volume */
+            ^~
+../src/ff.c: In function 'move_window':
+../src/ff.c:1108:8: warning: implicit declaration of function 'disk_read'; did you mean 'f_read'? [-Wimplicit-function-declaration]
+    if (disk_read(fs->pdrv, fs->win, sect, 1) != RES_OK) {
+        ^~~~~~~~~
+        f_read
+../src/ff.c: In function 'sync_fs':
+../src/ff.c:1149:7: warning: implicit declaration of function 'disk_ioctl' [-Wimplicit-function-declaration]
+   if (disk_ioctl(fs->pdrv, CTRL_SYNC, 0) != RES_OK) res = FR_DISK_ERR;
+       ^~~~~~~~~~
+../src/ff.c: In function 'mount_volume':
+../src/ff.c:3401:10: warning: implicit declaration of function 'disk_status' [-Wimplicit-function-declaration]
+   stat = disk_status(fs->pdrv);
+          ^~~~~~~~~~~
+../src/ff.c:3415:9: warning: implicit declaration of function 'disk_initialize' [-Wimplicit-function-declaration]
+  stat = disk_initialize(fs->pdrv); /* Initialize the physical drive */
+         ^~~~~~~~~~~~~~~
+Finished building: ../src/ff.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/lau/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+  26148	   1112	    468	  27728	   6c50	SD_Card_std.elf
+ 
+02:07:16 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+02:11:38 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/lau/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/lau/SD_Card_std/Utilities" -I"/home/lau/SD_Card_std/StdPeriph_Driver/inc" -I"/home/lau/SD_Card_std/inc" -I"/home/lau/SD_Card_std/CMSIS/device" -I"/home/lau/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'xmit_datablock':
+../src/sd_card.c:116:14: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+         wc = 512;
+              ^~~
+../src/sd_card.c:118:28: warning: passing argument 1 of 'xmit_spi_multi' makes pointer from integer without a cast [-Wint-conversion]
+             xmit_spi_multi(*buff++);
+                            ^
+../src/sd_card.c:26:13: note: expected 'const BYTE * {aka const unsigned char *}' but argument is of type 'BYTE {aka const unsigned char}'
+ static void xmit_spi_multi (
+             ^~~~~~~~~~~~~~
+../src/sd_card.c:119:28: warning: passing argument 1 of 'xmit_spi_multi' makes pointer from integer without a cast [-Wint-conversion]
+             xmit_spi_multi(*buff++);
+                            ^
+../src/sd_card.c:26:13: note: expected 'const BYTE * {aka const unsigned char *}' but argument is of type 'BYTE {aka const unsigned char}'
+ static void xmit_spi_multi (
+             ^~~~~~~~~~~~~~
+../src/sd_card.c:111:10: warning: unused variable 'i' [-Wunused-variable]
+  uint8_t i=0;
+          ^
+../src/sd_card.c: In function 'disk_initialize':
+../src/sd_card.c:188:13: warning: variable 'cmd' set but not used [-Wunused-but-set-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/lau/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+  26148	   1112	    468	  27728	   6c50	SD_Card_std.elf
+ 
+02:16:44 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+Building file: ../src/sd_card.c
+Invoking: MCU GCC Compiler
+/home/lau/SD_Card_std/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/lau/SD_Card_std/Utilities" -I"/home/lau/SD_Card_std/StdPeriph_Driver/inc" -I"/home/lau/SD_Card_std/inc" -I"/home/lau/SD_Card_std/CMSIS/device" -I"/home/lau/SD_Card_std/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/sd_card.d" -MT"src/sd_card.o" -o "src/sd_card.o" "../src/sd_card.c"
+../src/sd_card.c: In function 'disk_initialize':
+../src/sd_card.c:195:13: warning: variable 'cmd' set but not used [-Wunused-but-set-variable]
+     BYTE n, cmd, ty, ocr[4];
+             ^~~
+Finished building: ../src/sd_card.c
+ 
+Building target: SD_Card_std.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/lau/SD_Card_std/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "SD_Card_std.elf" @"objects.list"   -lm
+Finished building target: SD_Card_std.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "SD_Card_std.elf" "SD_Card_std.bin"
+arm-none-eabi-size "SD_Card_std.elf"
+   text	   data	    bss	    dec	    hex	filename
+  26196	   1112	    468	  27776	   6c80	SD_Card_std.elf
+ 
+02:16:51 **** Incremental Build of configuration Debug for project SD_Card_std ****
+make -j8 all 
+make: Nothing to be done for 'all'.

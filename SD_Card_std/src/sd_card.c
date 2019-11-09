@@ -13,55 +13,10 @@ static volatile DSTATUS Stat = STA_NOINIT;	/* Physical drive status */
 
 /* Receive multiple byte */
 static void rcvr_spi_multi (
-	BYTE *buff,		/* Pointer to data buffer */
-	UINT btr		/* Number of bytes to receive (even number) */
+	BYTE *buff		/* Pointer to data buffer */
 )
 {
-	WORD d;
- 
-    // wait until SPI transmit finish
-    SPI_wait(sel_SPI1);
-    // turn off SPI
-    SPI1->CR1 &= ~SPI_CR1_SPE;
-    //clear DS bit
-    SPI1->CR2 &= ~(SPI_CR2_DS_3 | SPI_CR2_DS_2 | SPI_CR2_DS_1 | SPI_CR2_DS_0);
-    /* Put SPI into 16-bit mode */
-    SPI1->CR2 |= (SPI_CR2_DS_3 | SPI_CR2_DS_2 | SPI_CR2_DS_1 | SPI_CR2_DS_0);
-    /*set FRXTH to 0 (16 bit)*/
-    SPI1->CR2 &= ~SPI_CR2_FRXTH;
-    // turn on SPI
-    SPI1->CR1 |= SPI_CR1_SPE;
-
-
-	SPI1->DR  = 0xFFFF;		/* Start the first SPI transaction */
-	btr -= 2;
-	do {					/* Receive the data block into buffer */
-		SPI_wait(sel_SPI1);/* Wait for end of the SPI transaction */
-		d = SPI1 -> DR;		/* Get received word */
-		SPI1 -> DR = 0xFFFF;/* Start next transaction */
-		buff[1] = d;
-		buff[0] = d >> 8; 		/* Store received data */
-		buff += 2;
-	} while (btr -= 2);
-	SPI_wait(sel_SPI1);		/* Wait for end of the SPI transaction */
-	d = SPI1->DR;			/* Get last word received */
-	buff[1] = d;
-	buff[0] = d >> 8;		/* Store it */
-
-
-	// wait until SPI transmit finish
-	SPI_wait(sel_SPI1);
-	// turn off SPI
-	SPI1->CR1 &= ~SPI_CR1_SPE;
-    //clear DS bit
-    SPI1->CR2 &= ~(SPI_CR2_DS_3 | SPI_CR2_DS_2 | SPI_CR2_DS_1 | SPI_CR2_DS_0);
-    /* Put SPI into 8-bit mode */
-    SPI1->CR2 |= (SPI_CR2_DS_2 | SPI_CR2_DS_1 | SPI_CR2_DS_0);
-    /*set FRXTH to 1 */
-    SPI1->CR2 |= SPI_CR2_FRXTH;
-    // turn on SPI
-    SPI1->CR1 |= SPI_CR1_SPE;
-
+    *buff = SPI_Send_8bit(sel_SPI1,0xFF);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -69,50 +24,10 @@ static void rcvr_spi_multi (
 #if FF_FS_READONLY == 0
 /* Send multiple byte */
 static void xmit_spi_multi (
-    const BYTE *buff,   /* Pointer to the data */
-    UINT btx            /* Number of bytes to send (even number) */
+    BYTE data   /* Pointer to the data */
 )
 {
-    WORD d;
-
-    // wait until SPI transmit finish
-    SPI_wait(sel_SPI1);
-    // turn off SPI
-    SPI1->CR1 &= ~SPI_CR1_SPE;
-    //clear DS bit
-    SPI1->CR2 &= ~(SPI_CR2_DS_3 | SPI_CR2_DS_2 | SPI_CR2_DS_1 | SPI_CR2_DS_0);
-    /* Put SPI into 16-bit mode */
-    SPI1->CR2 |= (SPI_CR2_DS_3 | SPI_CR2_DS_2 | SPI_CR2_DS_1 | SPI_CR2_DS_0);
-    /*set FRXTH to 0 (16 bit)*/
-    SPI1->CR2 &= ~SPI_CR2_FRXTH;
-    // turn on SPI
-    SPI1->CR1 |= SPI_CR1_SPE;
-
-
-    d = buff[0] << 8 | buff[1]; buff += 2;
-    SPI1 -> DR = d;    /* Send the first word */
-    btx -= 2;
-    do {
-        d = buff[0] << 8 | buff[1]; buff += 2;  /* Word to send next */
-        SPI_wait(sel_SPI1);  /* Wait for end of the SPI transaction */
-        SPI1->DR;                            /* Discard received word */
-        SPI1->DR = d;                        /* Start next transaction */
-    } while (btx -= 2);
-    SPI_wait(sel_SPI1); ;  /* Wait for end of the SPI transaction */
-    SPI1->DR;                            /* Discard received word */
-
-    // wait until SPI transmit finish
-    SPI_wait(sel_SPI1);
-    // turn off SPI
-    SPI1->CR1 &= ~SPI_CR1_SPE;
-    //clear DS bit
-    SPI1->CR2 &= ~(SPI_CR2_DS_3 | SPI_CR2_DS_2 | SPI_CR2_DS_1 | SPI_CR2_DS_0);
-    /* Put SPI into 8-bit mode */
-    SPI1->CR2 |= (SPI_CR2_DS_2 | SPI_CR2_DS_1 | SPI_CR2_DS_0);
-    /*set FRXTH to 1 */
-    SPI1->CR2 |= SPI_CR2_FRXTH;
-    // turn on SPI
-    SPI1->CR1 |= SPI_CR1_SPE;
+   SPI_Send_8bit(sel_SPI1,data);
 }
 #endif
 
@@ -167,9 +82,14 @@ static int rcvr_datablock (    /* 1:OK, 0:Error */
         token =  SPI_Send_8bit(sel_SPI1,0xFF);
         /* This loop will take a time. Insert rot_rdq() here for multitask envilonment. */
     } while ((token == 0xFF) && Timer1);
+
     if(token != 0xFE) return 0;     /* Function fails if invalid DataStart token or timeout */
 
-    rcvr_spi_multi(buff, btr);      /* Store trailing data to the buffer */
+    do {
+        rcvr_spi_multi(buff++);
+        rcvr_spi_multi(buff++);/* Store trailing data to the buffer */
+    } while(btr -= 2);
+
     SPI_Send_8bit(sel_SPI1,0xFF);
     SPI_Send_8bit(sel_SPI1,0xFF);   /* Discard CRC */
 
@@ -187,18 +107,30 @@ int xmit_datablock (    /* 1:OK, 0:Failed */
     BYTE token          /* Token */
 )
 {
-    BYTE resp;
-
-
+	uint8_t resp,wc;
+	uint8_t i=0;
     if (!wait_for_card_ready(500)) return 0;     /* Wait for card ready */
 
     SPI_Send_8bit(sel_SPI1,token);                   /* Send token */
-    if (token != 0xFD) {                /* Send data if token is other than StopTran */
-        xmit_spi_multi(buff, 512);      /* Data */
+    if (token != 0xFD) {   /* Send data if token is other than StopTran */
+        wc = 0;
+
+        do {
+            xmit_spi_multi(*buff++);
+            xmit_spi_multi(*buff++);
+        }while(--wc);
+
         SPI_Send_8bit(sel_SPI1,0xFF);
         SPI_Send_8bit(sel_SPI1,0xFF); /* Dummy CRC */
 
-        resp = SPI_Send_8bit(sel_SPI1,0xFF);    /* Receive data resp */
+        while(i <=64){
+        	resp = SPI_Send_8bit(sel_SPI1,0xFF);    /* Receive data resp */
+        	if ((resp & 0x1F) == 0x05)
+        	        break;
+
+        	      i++;
+        }
+
         if ((resp & 0x1F) != 0x05) return 0;    /* Function fails if the data packet was not accepted */
     }
     return 1;
@@ -359,7 +291,7 @@ DRESULT disk_read (
 )
 {
 	DWORD sect = (DWORD)sector;
-
+	BYTE test = 1;
 
 	if (drv || !count) return RES_PARERR;		/* Check parameter */
 	if (Stat & STA_NOINIT) return RES_NOTRDY;	/* Check if drive is ready */
@@ -367,14 +299,14 @@ DRESULT disk_read (
 	if (!(CardType & CT_BLOCK)) sect *= 512;	/* LBA ot BA conversion (byte addressing cards) */
 
 	if (count == 1) {	/* Single sector read */
-	    BYTE test = send_cmd(CMD17, sect);
-		if ((send_cmd(CMD17, sect) == 0)	/* READ_SINGLE_BLOCK */
-			&& rcvr_datablock(buff, 512)) {
+	    test = send_cmd(CMD17, sect);
+		if (test == 0 && rcvr_datablock(buff, 512)) /* READ_SINGLE_BLOCK */{
 			count = 0;
 		}
 	}
 	else {				/* Multiple sector read */
-		if (send_cmd(CMD18, sect) == 0) {	/* READ_MULTIPLE_BLOCK */
+	    test = send_cmd(CMD18, sect) ;
+		if ( test == 0) {	/* READ_MULTIPLE_BLOCK */
 			do {
 				if (!rcvr_datablock(buff, 512)) break;
 				buff += 512;
@@ -401,6 +333,8 @@ DRESULT disk_write (
 {
     DWORD sect = (DWORD)sector;
 
+    BYTE test = 1;
+
 
     if (drv || !count) return RES_PARERR;       /* Check parameter */
     if (Stat & STA_NOINIT) return RES_NOTRDY;   /* Check drive status */
@@ -409,8 +343,8 @@ DRESULT disk_write (
     if (!(CardType & CT_BLOCK)) sect *= 512;    /* LBA ==> BA conversion (byte addressing cards) */
 
     if (count == 1) {   /* Single sector write */
-        if ((send_cmd(CMD24, sect) == 0)    /* WRITE_BLOCK */
-            && xmit_datablock(buff, 0xFE)) {
+        test = send_cmd(CMD24, sect);
+        if ( test == 0    /* WRITE_BLOCK */ && xmit_datablock(buff, 0xFE)) {
             count = 0;
         }
     }
@@ -429,4 +363,93 @@ DRESULT disk_write (
     return count ? RES_ERROR : RES_OK;  /* Return result */
 }
 #endif
+
+/*-----------------------------------------------------------------------*/
+/* Miscellaneous drive controls other than data read/write               */
+/*-----------------------------------------------------------------------*/
+
+DRESULT disk_ioctl (
+    BYTE drv,       /* Physical drive number (0) */
+    BYTE cmd,       /* Control command code */
+    void *buff      /* Pointer to the conrtol data */
+)
+{
+    DRESULT res;
+    BYTE n, csd[16],test,test1,test2;
+    DWORD st, ed, csize;
+    LBA_t *dp;
+
+
+    if (drv) return RES_PARERR;                 /* Check parameter */
+    if (Stat & STA_NOINIT) return RES_NOTRDY;   /* Check if drive is ready */
+
+    res = RES_ERROR;
+
+    switch (cmd) {
+    case CTRL_SYNC :        /* Wait for end of internal write process of the drive */
+        if (select_card()) res = RES_OK;
+        break;
+    case GET_SECTOR_COUNT : /* Get drive capacity in unit of sector (DWORD) */
+        test = send_cmd(CMD9, 0);
+        if ( test && rcvr_datablock(csd, 16)) {
+            if ((csd[0] >> 6) == 1) {   /* SDC ver 2.00 */
+                csize = csd[9] + ((WORD)csd[8] << 8) + ((DWORD)(csd[7] & 63) << 16) + 1;
+                *(LBA_t*)buff = csize << 10;
+            } else {                    /* SDC ver 1.XX or MMC ver 3 */
+                n = (csd[5] & 15) + ((csd[10] & 128) >> 7) + ((csd[9] & 3) << 1) + 2;
+                csize = (csd[8] >> 6) + ((WORD)csd[7] << 2) + ((WORD)(csd[6] & 3) << 10) + 1;
+                *(LBA_t*)buff = csize << (n - 9);
+            }
+            res = RES_OK;
+        }
+        break;
+
+    case GET_BLOCK_SIZE :   /* Get erase block size in unit of sector (DWORD) */
+        if (CardType & CT_SD2) {    /* SDC ver 2.00 */
+            test = send_cmd(ACMD13, 0);
+            if (test == 0) { /* Read SD status */
+                SPI_Send_8bit(sel_SPI1,0xFF);
+                if (rcvr_datablock(csd, 16)) {              /* Read partial block */
+                    for (n = 64 - 16; n; n--) SPI_Send_8bit(sel_SPI1,0xFF);;   /* Purge trailing data */
+                    *(DWORD*)buff = 16UL << (csd[10] >> 4);
+                    res = RES_OK;
+                }
+            }
+        } else {                    /* SDC ver 1.XX or MMC */
+            test = (send_cmd(CMD9, 0) == 0);
+            if ( test && rcvr_datablock(csd, 16)) {  /* Read CSD */
+                if (CardType & CT_SD1) {    /* SDC ver 1.XX */
+                    *(DWORD*)buff = (((csd[10] & 63) << 1) + ((WORD)(csd[11] & 128) >> 7) + 1) << ((csd[13] >> 6) - 1);
+                } else {                    /* MMC */
+                    *(DWORD*)buff = ((WORD)((csd[10] & 124) >> 2) + 1) * (((csd[11] & 3) << 3) + ((csd[11] & 224) >> 5) + 1);
+                }
+                res = RES_OK;
+            }
+        }
+        break;
+
+    case CTRL_TRIM :    /* Erase a block of sectors (used when _USE_ERASE == 1) */
+        if (!(CardType & CT_SDC)) break;                /* Check if the card is SDC */
+        if (disk_ioctl(drv, MMC_GET_CSD, csd)) break;   /* Get CSD */
+        if (!(csd[0] >> 6) && !(csd[10] & 0x40)) break; /* Check if sector erase can be applied to the card */
+        dp = buff; st = (DWORD)dp[0]; ed = (DWORD)dp[1];    /* Load sector block */
+        if (!(CardType & CT_BLOCK)) {
+            st *= 512; ed *= 512;
+        }
+        test = send_cmd(CMD32, st) ;
+        test1 = send_cmd(CMD33, ed);
+        test2 =  send_cmd(CMD38, 0);
+        if (test == 0 && test1 == 0 && test2 == 0 && wait_for_card_ready(30000)) { /* Erase sector block */
+            res = RES_OK;   /* FatFs does not check result of this command */
+        }
+        break;
+
+    default:
+        res = RES_PARERR;
+    }
+
+    deselect_card();
+
+    return res;
+}
 
