@@ -33,4 +33,17 @@
 //     #define STA_NOINIT      0x01    /* Drive not initialized */
 //     #define STA_NODISK      0x02    /* No medium in the drive */
 //     #define STA_PROTECT     0x04    /* Write protected */
-DSTATUS SD_initialize ();
+DSTATUS disk_initialize (BYTE drv);
+DSTATUS disk_status (BYTE drv);		/* Physical drive number (0) */
+DRESULT disk_read (
+	BYTE drv,		/* Physical drive number (0) */
+	BYTE *buff,		/* Pointer to the data buffer to store read data */
+	LBA_t sector,	/* Start sector number (LBA) */
+	UINT count		/* Number of sectors to read (1..128) */
+);
+DRESULT disk_write (
+    BYTE drv,           /* Physical drive number (0) */
+    const BYTE *buff,   /* Ponter to the data to write */
+    LBA_t sector,       /* Start sector number (LBA) */
+    UINT count          /* Number of sectors to write (1..128) */
+);

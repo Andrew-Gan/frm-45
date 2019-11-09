@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/lau/Projects/frm-45"/>
+		<item value="/home/lau/ECE362"/>
+		<item value="/home/lau/SD_Card_std"/>
+		<item value="/home/lau/Projects/frm-45/SD_Card_std"/>
+	</list>
+	<section name="NewWizardAction">
+	</section>
+</section>
