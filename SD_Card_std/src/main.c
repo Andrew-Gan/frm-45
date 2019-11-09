@@ -5,12 +5,16 @@
 #include "ff.h"
 #include "diskio.h"
 #include "oled.h"
+#include "button.h"
+
+char nothing [] = "";
 
 
-char button_pressed[] = "Pressed";
-char nothing [] = "Button not pressed ";
-
-
+void clear_buffer(char *buff){
+    for (int i= 0 ; i < 128 ; i++){
+        buff[i] = '\0';
+    }
+}
 //FRESULT scan_files (
 //    char* path        /* Start node to be scanned (***also used as work area***) */
 //)
@@ -42,21 +46,6 @@ char nothing [] = "Button not pressed ";
 //    return res;
 //}
 
-void EXTI0_1_IRQHandler(){
-       EXTI->PR |= EXTI_PR_PR0;
-       Timer1 = 2* SECOND;
-       lcd_output(button_pressed,0);
-
-}
-
-void init_exti(){
-    RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
-    EXTI-> FTSR |= EXTI_FTSR_TR0;
-    EXTI-> IMR |= EXTI_IMR_MR0;
-    NVIC->ISER[0] = 1<<EXTI0_1_IRQn;
-    NVIC_SetPriority(EXTI0_1_IRQn,1);
-}
-
 
 int main(void)
 {
@@ -64,42 +53,80 @@ int main(void)
     FATFS pfs;
     DWORD fre_clust, fre_sect, tot_sect;
     FIL test_file;
+    FRESULT res;
+    char buff1[128];
+    char buff2[128];
+
+    // Initialize the display.
+	spi_init_lcd();
+    // Initialize button
+    init_exti();
 
     /* Get volume information and free clusters of drive 1 */
-    FRESULT res = f_mount(&pfs, "", 0);
-     res  = f_getfree("", &fre_clust, &fs);
+    res = f_mount(&pfs, "", 0);
+    res  = f_getfree("", &fre_clust, &fs);
+
+
+
+    //output to LCD if initialization succeed
+    Timer1 = 1* SECOND;
+    lcd_output("Mounting SD.",nothing,0);
+    Timer1 = 1* SECOND;
+    lcd_output("Mounting SD .",nothing,0);
+    Timer1 = 1* SECOND;
+    lcd_output("Mounting SD  .",nothing,0);
+
+
+    if(res == FR_OK){
+    Timer1 = 2* SECOND;
+    lcd_output("Succeed!",nothing,0);
+    }
+    else{
+        sprintf(buff1,"Error: %d", res);
+        lcd_output(buff1,nothing,0);
+        while(1);
+    }
 
     /* Get total sectors and free sectors */
-    tot_sect = ((fs->n_fatent - 2) * fs->csize * 0.5);
-    fre_sect = (fre_clust * fs->csize * 0.5);
+    tot_sect = ((fs->n_fatent - 2) * fs->csize) >> 2;
+    fre_sect = (fre_clust * fs->csize ) >> 2;
 
-    res = f_open(&test_file, "test.txt", FA_OPEN_ALWAYS | FA_READ | FA_WRITE);
+    sprintf(buff1, "Total: %dMB", tot_sect);
+    sprintf(buff2, "Free : %dMB", fre_sect);
+
+
+    Timer1 = 5 * SECOND;
+    lcd_output(buff1,buff2,0);
+    clear_buffer(buff1);
+    clear_buffer(buff2);
+
+     res = f_open(&test_file, "test.txt", FA_OPEN_ALWAYS | FA_READ | FA_WRITE);
+
+    char test[] = "Fuck You\n";
+    /* Writing text */
+    res = f_puts(test,&test_file);
+
+    /* Close file */
     res = f_close(&test_file);
-//   char test[] = "Fuck You\n";
-//   /* Writing text */
-//   res = f_puts(test,&fil);
-
-   /* Close file */
-
-
 
     //
     return 0;
 }
-
-    /*
-     * This is to test EXTI Interrupt
-     *
-     */
-//    volatile uint16_t prescalar = 480;
-//    volatile uint16_t arr = 100;
-//    init_tim6(prescalar, arr);
+///*
+// * This is to test EXTI Interrupt
+// *
+// */
+//volatile uint16_t prescalar = 480;
+//volatile uint16_t arr = 100;
+//init_tim6(prescalar, arr);
 //
-//    init_exti();
-//    while(1){
-//    Timer1 = 3* SECOND;
-//    lcd_output(nothing,0);
-//    }
+//init_exti();
+//while(1){
+//Timer1 = 3* SECOND;
+//lcd_output(nothing,0);
+//}
+
+
 
 
 

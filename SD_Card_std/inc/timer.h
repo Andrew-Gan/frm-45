@@ -6,7 +6,6 @@
 volatile uint16_t Timer1;
 volatile uint16_t Timer2;
 
-
 //initialize timer and interrupt
 void init_tim6(volatile uint16_t Prescalar,volatile uint16_t Arr);
 

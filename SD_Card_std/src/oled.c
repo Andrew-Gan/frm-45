@@ -50,7 +50,7 @@ static void spi_data(char b) {
 //procedures for the LCD by calling
 //generic_lcd_startup()
 //.
-static void spi_init_lcd(void) {
+void spi_init_lcd(void) {
     // Your code goes here.
 
     //enable clock for SPI and GPIOB
@@ -101,17 +101,29 @@ static void nondma_display1(const char *s) {
     	spi_data(' ');
 }
 
-void lcd_output(const char *s, int final_offset) {
+static void nondma_display2(const char *s) {
+    // put the cursor on the beginning of the second line (offset 64).
+    spi_cmd(0x80 + 64);
+    int x;
+    for(x=0; x<16; x+=1)
+        if (s[x] != '\0')
+            spi_data(s[x]);
+        else
+            break;
+    for(   ; x<16; x+=1)
+        spi_data(' ');
+}
 
-    // Initialize the display.
-	spi_init_lcd();
+void lcd_output(const char *str1,const char *str2, int final_offset) {
+
     // Write text.
 	int offset = 0;
     while(Timer1) {
         if(offset > final_offset){
             offset = 0;
         }
-    	nondma_display1(&s[offset]);
+    	nondma_display1(&str1[offset]);
+        nondma_display2(&str2[offset]);
     	offset++;
     	Timer2 = 1000;
     	while(Timer2);

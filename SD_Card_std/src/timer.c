@@ -25,6 +25,7 @@ static void countdown_timer(){
     if (n) Timer1 = --n;
     n = Timer2;
     if (n) Timer2 = --n;
+    
 }
 
 void TIM6_DAC_IRQHandler() {

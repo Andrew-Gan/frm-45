@@ -4,4 +4,5 @@
 #include <stdio.h>
 
 
- void lcd_output(const char *s, int final_offset);
+void lcd_output(const char *str1,const char *str2, int final_offset);
+void spi_init_lcd(void);
