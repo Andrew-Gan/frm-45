@@ -1,9 +1,0 @@
-main.c:80:6:send_uart	24	static
-main.c:87:5:bufsize	24	static
-main.c:94:6:bufclear	16	static
-main.c:108:5:main	8	static
-main.c:159:6:SystemClock_Config	104	static
-main.c:202:13:MX_SPI1_Init	8	static
-main.c:242:13:MX_USART1_UART_Init	8	static
-main.c:277:13:MX_GPIO_Init	48	static
-main.c:306:6:Error_Handler	8	static
