@@ -2,7 +2,7 @@
 ECE362 Project 1 Drawing Machine  
 
 Stepper and Servo Motors  
-[SD Card Programming](https://github.com/Andrew-Gan/frm-45/tree/second)  
+[SD Card Programming](https://github.com/Andrew-Gan/frm-45/tree/master/SD_Card_std)  
 [Parser for Limited G-Code](https://github.com/Andrew-Gan/frm-45/tree/master/Parser)  
 
 ## Used Pins
