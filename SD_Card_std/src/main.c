@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdbool.h>
 #include "stm32f0xx.h"
 #include "stm32f0_discovery.h"
 #include "timer.h"
@@ -7,7 +8,20 @@
 #include "oled.h"
 #include "button.h"
 
+//global variables
 char nothing [] = "";
+FRESULT res;
+DIR dir;
+FILINFO fno;
+bool button_is_pressed = false;
+
+//interrupt for next file
+void EXTI0_1_IRQHandler(){
+       EXTI->PR |= EXTI_PR_PR0;
+       button_is_pressed = true;
+       res = f_readdir(&dir,&fno);
+}
+
 
 
 void clear_buffer(char *buff){
@@ -53,7 +67,9 @@ int main(void)
     FATFS pfs;
     DWORD fre_clust, fre_sect, tot_sect;
     FIL test_file;
-    FRESULT res;
+    BYTE test;
+
+
     char buff1[128];
     char buff2[128];
 
@@ -70,52 +86,101 @@ int main(void)
 
     //output to LCD if initialization succeed
     Timer1 = 1* SECOND;
-    lcd_output("Mounting SD.",nothing,0);
+    lcd_output("Mounting SD.",nothing,0,0);
     Timer1 = 1* SECOND;
-    lcd_output("Mounting SD .",nothing,0);
+    lcd_output("Mounting SD .",nothing,0,0);
     Timer1 = 1* SECOND;
-    lcd_output("Mounting SD  .",nothing,0);
+    lcd_output("Mounting SD  .",nothing,0,0);
+    Timer1 = 1* SECOND;
+    lcd_output("Mounting SD   .",nothing,0,0);
+    Timer1 = 1* SECOND;
+    lcd_output("Mounting SD.",nothing,0,0);
+    Timer1 = 1* SECOND;
+    lcd_output("Mounting SD .",nothing,0,0);
 
-
+    // If succeed
     if(res == FR_OK){
     Timer1 = 2* SECOND;
-    lcd_output("Succeed!",nothing,0);
+    lcd_output("Succeed!",nothing,0,0);
     }
     else{
+    // output errors
+        while(1){
+        Timer1 = 5 * SECOND;
         sprintf(buff1,"Error: %d", res);
-        lcd_output(buff1,nothing,0);
-        while(1);
+        lcd_output(buff1,"Please try again...",0, 18);
+        }
     }
 
     /* Get total sectors and free sectors */
-    tot_sect = ((fs->n_fatent - 2) * fs->csize) >> 2;
-    fre_sect = (fre_clust * fs->csize ) >> 2;
+    tot_sect = ((fs->n_fatent - 2) * fs->csize) >> 1;
+    fre_sect = (fre_clust * fs->csize ) >> 1;
 
-    sprintf(buff1, "Total: %dMB", tot_sect);
-    sprintf(buff2, "Free : %dMB", fre_sect);
+    sprintf(buff1, "Total: %dKB", tot_sect);
+    sprintf(buff2, " Free: %dKB", fre_sect);
+
 
 
     Timer1 = 5 * SECOND;
-    lcd_output(buff1,buff2,0);
+    lcd_output(buff1,buff2,0,0);
+
     clear_buffer(buff1);
     clear_buffer(buff2);
 
-     res = f_open(&test_file, "test.txt", FA_OPEN_ALWAYS | FA_READ | FA_WRITE);
+    res = f_opendir(&dir,"/");
 
-    char test[] = "Fuck You\n";
-    /* Writing text */
-    res = f_puts(test,&test_file);
+    Timer1 = 1* SECOND;
+    lcd_output("Opening","Directory.",0,0);
+    Timer1 = 1* SECOND;
+    lcd_output("Opening","Directory .",0,0);
+    Timer1 = 1* SECOND;
+    lcd_output("Opening","Directory  .",0,0);
+    Timer1 = 1* SECOND;
+    lcd_output("Opening","Directory   .",0,0);
 
-    /* Close file */
-    res = f_close(&test_file);
+    if(res != FR_OK){
+        while(1){
+            Timer1 = 5 * SECOND;
+            lcd_output("Error","Closing Directory",0,0);
+        }
+    }
 
+    while(1){
+        /* if button is pressed */
+        if(button_is_pressed == true) {
+
+            // check if is the end of directory
+            if(fno.fname[0] == 0){
+                f_closedir(&dir);
+                f_opendir(&dir,"/");
+            }
+            // output file name only if it's not 0
+            if(fno.fname[0] != 0){
+                Timer1 = 3*SECOND;
+                lcd_output(fno.fname,nothing,0,0);
+            }
+            // toggle it
+            button_is_pressed = false;
+        }
+
+        // output only if the first character is valid
+        if(fno.fname[0] != 0){
+            Timer1 = 1*SECOND;
+            lcd_output(fno.fname,nothing,0,0);
+        }
+        else{
+            Timer1 = 1*SECOND;
+            lcd_output("Press button",nothing,0,0);
+        }
+
+    }
     //
     return 0;
 }
-///*
-// * This is to test EXTI Interrupt
-// *
-// */
+///
+// // This is to test EXTI Interrupt
+// 
+// 
 //volatile uint16_t prescalar = 480;
 //volatile uint16_t arr = 100;
 //init_tim6(prescalar, arr);
@@ -127,15 +192,22 @@ int main(void)
 //}
 
 
+// // This is to open and write string to a textfile
+//     res = f_open(&test_file, "test.txt", FA_OPEN_ALWAYS | FA_READ | FA_WRITE);
+//
+//    char test[] = "Fuck You\n";
+//    /* Writing text */
+//    res = f_puts(test,&test_file);
+//
+//    /* Close file */
+//    res = f_close(&test_file);
 
-
-
-    /* This is to test LCD output
-//	char initialize[] = "    Successfully Initialize SD Card";
+//// This is to test LCD output
+//	    char initialize[] = "    Successfully Initialize SD Card";
 //		Timer1 = 5 * SECOND;
 //		lcd_output(initialize,35);
-//	char read[] = "     Reading SD Card...     ";
+//	    char read[] = "     Reading SD Card...     ";
 //	    Timer1 = 10 * SECOND;
 //	    lcd_output(read,25);
-    */
+    
 
