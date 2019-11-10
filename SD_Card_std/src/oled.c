@@ -6,6 +6,9 @@
 #include "timer.h"
 #include "oled.h"
 
+int offset1 = 0;
+int offset2 = 0;
+
 //=========================================================================
 // An inline assembly language version of nano_wait.
 //=========================================================================
@@ -114,17 +117,22 @@ static void nondma_display2(const char *s) {
         spi_data(' ');
 }
 
-void lcd_output(const char *str1,const char *str2, int final_offset) {
+void lcd_output(const char *str1,const char *str2, 
+int final_offset1, int final_offset2) {
 
     // Write text.
-	int offset = 0;
+
     while(Timer1) {
-        if(offset > final_offset){
-            offset = 0;
+        if(offset1 > final_offset1){
+            offset1 = 0;
         }
-    	nondma_display1(&str1[offset]);
-        nondma_display2(&str2[offset]);
-    	offset++;
+        if(offset2 > final_offset2){
+            offset2 = 0;
+        }
+    	nondma_display1(&str1[offset1]);
+        nondma_display2(&str2[offset2]);
+    	offset1++;
+        offset2++;
     	Timer2 = 1000;
     	while(Timer2);
     }

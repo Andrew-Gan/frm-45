@@ -3,9 +3,7 @@
 
 
 
-void EXTI0_1_IRQHandler(){
-       EXTI->PR |= EXTI_PR_PR0;
-}
+
 
 void init_exti(){
     RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
