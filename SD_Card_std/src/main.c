@@ -24,42 +24,21 @@ void EXTI0_1_IRQHandler(){
 }
 
 
+//interrupt for enter
+void EXTI2_3_IRQHandler(){
+    EXTI->PR |= EXTI_PR_PR2;
+    //if enter is pressed
+    enter = true;
+}
+
 
 void clear_buffer(char *buff){
     for (int i= 0 ; i < 128 ; i++){
         buff[i] = '\0';
     }
 }
-//FRESULT scan_files (
-//    char* path        /* Start node to be scanned (***also used as work area***) */
-//)
-//{
-//    FRESULT res;
-//    DIR dir;
-//    UINT i;
-//    static FILINFO fno;
-//
-//
-//    res = f_opendir(&dir, path);                       /* Open the directory */
-//    if (res == FR_OK) {
-//        for (;;) {
-//            res = f_readdir(&dir, &fno);                   /* Read a directory item */
-//            if (res != FR_OK || fno.fname[0] == 0) break;  /* Break on error or end of dir */
-//            if (fno.fattrib & AM_DIR) {                    /* It is a directory */
-//                i = strlen(path);
-//                sprintf(&path[i], "/%s", fno.fname);
-//                res = scan_files(path);                    /* Enter the directory */
-//                if (res != FR_OK) break;
-//                path[i] = 0;
-//            } else {                                       /* It is a file. */
-//
-//            }
-//        }
-//        f_closedir(&dir);
-//    }
-//
-//    return res;
-//}
+
+
 
 
 int main(void)
@@ -67,8 +46,8 @@ int main(void)
     FATFS *fs;
     FATFS pfs;
     DWORD fre_clust, fre_sect, tot_sect;
-    FIL test_file;
-    BYTE test;
+    FIL file;
+
 
 
     char buff1[128];
@@ -117,8 +96,8 @@ int main(void)
     tot_sect = ((fs->n_fatent - 2) * fs->csize) >> 1;
     fre_sect = (fre_clust * fs->csize ) >> 1;
 
-    sprintf(buff1, "Total: %dKB", tot_sect);
-    sprintf(buff2, " Free: %dKB", fre_sect);
+    sprintf(buff1, "Total: %luKB", tot_sect);
+    sprintf(buff2, " Free: %luKB", fre_sect);
 
 
 
@@ -160,6 +139,8 @@ int main(void)
             button_is_pressed = false;
         }
         else{
+            //if enter is pressed
+            if(enter == true) break;
             // output only if the first character is valid
             if(fno.fname[0] != 0 && fno.fname[0] != 45 ){
                 Timer1 = 1*SECOND;
@@ -173,6 +154,13 @@ int main(void)
         }
     }
 
+    f_open(&file,fno.fname,FA_READ);
+    f_gets(buff1,128,&file);
+    f_close(&file);
+
+    Timer1 = 1*SECOND;
+    lcd_output(buff1,nothing,0,0);
+    clear_buffer(buff1);
 
 
     return 0;
