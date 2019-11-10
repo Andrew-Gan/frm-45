@@ -3,21 +3,14 @@ ECE362 Project 1 Drawing Machine
 
 Stepper and Servo Motors  
 [SD Card Programming](https://github.com/Andrew-Gan/frm-45/tree/second)  
-[Image Processing](https://github.com/Andrew-Gan/frm-45/tree/master/Image_Processing)
+[Parser for Limited G-Code](https://github.com/Andrew-Gan/frm-45/tree/master/Parser)  
 
 ## Used Pins
 * **PA8** - _servomotor_  
 * **PA4-7** - _sd card reader_
 * **PB12-15**  - _OLED display_
 * **PA1-PA2**  - _EXTI interrupt_
-
-## References
-* [CoreXY CNC Plotter](https://www.instructables.com/id/CoreXY-CNC-Plotter/?fbclid=IwAR0pwp5_IWx3ZKXX_-JnrqQA2Jc5w_0K_mVkKk8bpvbu7aeOSSTUAUPy2AY) 
-* [How to read GCode](https://makezine.com/2016/10/24/get-to-know-your-cnc-how-to-read-g-code/?fbclid=IwAR3-w1awEFc9UalxPZxf2Twn3zoppbnQXDNl3gHNShbNhc7IxlubZtNi5JA)
-* [Gcode Reference](https://www.cnccookbook.com/g-code-m-code-reference-list-cnc-mills/)
-* [Another website about how to make gcode](https://www.marginallyclever.com/2013/08/how-to-build-an-2-axis-arduino-cnc-gcode-interpreter/?fbclid=IwAR2Cuwl6wh2F5Wqw8JK4fef5dCa7CKCwGwoWh0Y8hn-iv6d_DvxPZTSHs24)
-* [Bresenham's line algorithm to draw a line between 2 points](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm)
-
+  
 ## SD Card and OLED References
 ---
 - [Reading From SD Card](http://shukra.cedt.iisc.ernet.in/edwiki/Reading_and_writing_to_a_file_on_sd_card_using_stm32_discovery_kit)
@@ -31,3 +24,14 @@ Stepper and Servo Motors
 - [SPI presentation from STM](https://www.st.com/content/ccc/resource/training/technical/product_training/group0/3e/ee/cd/b7/84/4b/45/ee/STM32F7_Peripheral_SPI/files/STM32F7_Peripheral_SPI.pdf/_jcr_content/translations/en.STM32F7_Peripheral_SPI.pdf)
 
 ![SD_init](Sdinit.jpg)
+  
+## GCode References
+* [CoreXY CNC Plotter](https://www.instructables.com/id/CoreXY-CNC-Plotter/?fbclid=IwAR0pwp5_IWx3ZKXX_-JnrqQA2Jc5w_0K_mVkKk8bpvbu7aeOSSTUAUPy2AY) 
+* [How to read GCode](https://makezine.com/2016/10/24/get-to-know-your-cnc-how-to-read-g-code/?fbclid=IwAR3-w1awEFc9UalxPZxf2Twn3zoppbnQXDNl3gHNShbNhc7IxlubZtNi5JA)
+* [Gcode Reference](https://www.cnccookbook.com/g-code-m-code-reference-list-cnc-mills/)
+* [GCode G02 G03](https://www.cnccookbook.com/cnc-g-code-arc-circle-g02-g03/)  
+* [Servomotor with STM32](https://controllerstech.com/servo-motor-with-stm32/)  
+* [Another website about how to make gcode](https://www.marginallyclever.com/2013/08/how-to-build-an-2-axis-arduino-cnc-gcode-interpreter/?fbclid=IwAR2Cuwl6wh2F5Wqw8JK4fef5dCa7CKCwGwoWh0Y8hn-iv6d_DvxPZTSHs24)
+* [Bresenham's line algorithm to draw a line between 2 points](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm)
+
+![G-Code](Parser/g-code.png)
