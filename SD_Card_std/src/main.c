@@ -14,6 +14,7 @@ FRESULT res;
 DIR dir;
 FILINFO fno;
 bool button_is_pressed = false;
+bool enter = false;
 
 //interrupt for next file
 void EXTI0_1_IRQHandler(){
@@ -149,7 +150,7 @@ int main(void)
         /* if button is pressed */
         if(button_is_pressed == true) {
 
-            // check if is the end of directory
+            // check if is the end of directory or invalid underscore character
             if(fno.fname[0] == 0 || fno.fname[0] == 45){
                 f_closedir(&dir);
                 f_opendir(&dir,"/");
@@ -171,9 +172,13 @@ int main(void)
             }
         }
     }
-    //
+
+
+
     return 0;
 }
+
+
 ///
 // // This is to test EXTI Interrupt
 // 
