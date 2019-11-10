@@ -150,29 +150,26 @@ int main(void)
         if(button_is_pressed == true) {
 
             // check if is the end of directory
-            if(fno.fname[0] == 0){
+            if(fno.fname[0] == 0 || fno.fname[0] == 45){
                 f_closedir(&dir);
                 f_opendir(&dir,"/");
-            }
-            // output file name only if it's not 0
-            if(fno.fname[0] != 0){
-                Timer1 = 3*SECOND;
-                lcd_output(fno.fname,nothing,0,0);
+                f_readdir(&dir,&fno);
             }
             // toggle it
             button_is_pressed = false;
         }
-
-        // output only if the first character is valid
-        if(fno.fname[0] != 0){
-            Timer1 = 1*SECOND;
-            lcd_output(fno.fname,nothing,0,0);
-        }
         else{
-            Timer1 = 1*SECOND;
-            lcd_output("Press button",nothing,0,0);
+            // output only if the first character is valid
+            if(fno.fname[0] != 0 && fno.fname[0] != 45 ){
+                Timer1 = 1*SECOND;
+                lcd_output(fno.fname,nothing,0,0);
+            }
+            // or else tell user to press button
+            else{
+                Timer1 = 1*SECOND;
+                lcd_output("Press button",nothing,0,0);
+            }
         }
-
     }
     //
     return 0;
