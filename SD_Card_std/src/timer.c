@@ -36,3 +36,44 @@ void TIM6_DAC_IRQHandler() {
 void disable_timer(){
     TIM6->CR1 &= ~TIM_CR1_CEN;
 }
+
+
+void init_tim2(){
+    //Enable RCC GPIOB
+    RCC->AHBENR |= RCC_AHBENR_GPIOBEN;
+
+    //Set PB3 as alternate function
+    //clear it first
+    GPIOB->MODER &= ~(3 << 2*3);
+    //set it
+    GPIOB->MODER |= (GPIO_Mode_AF << 2*3);
+
+    //set pin for alternate function AF2
+    GPIOB->AFR[0] |= (2 << 12) ;
+
+    //enable timer 2
+    RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
+
+
+
+
+    //count up
+    TIM2->CR1 &= ~TIM_CR1_DIR;
+
+    //set it to 1ms trigger
+    TIM2->PSC = 4800-1;
+    TIM2->ARR = 100-1;
+
+    TIM2->CCR2 = 50;
+
+    //channel 2 toggle mode
+    TIM2->CCMR1 &= ~TIM_CCMR1_OC2M_2;
+    TIM2->CCMR1 |= TIM_CCMR1_OC2M_0 | TIM_CCMR1_OC2M_1;
+
+    //enable output for TIM2
+    TIM2->CCER |=  TIM_CCER_CC2E;
+
+    //enable timer2
+    TIM2->CR1 |= TIM_CR1_CEN;
+
+}
