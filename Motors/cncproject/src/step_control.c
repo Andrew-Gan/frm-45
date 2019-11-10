@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include "cnclib.h"
+#include "step_control.h"
 
 #define STEP_SIZE 200*16/40
 
@@ -27,7 +28,7 @@ void G1_cmd(float X, float Y){
 
 void move_to(float X, float Y){
 
-    int delta_y, delta_x, slope, ;
+    int delta_y, delta_x, slope;
     this_x = round(X * STEP_SIZE);
     this_y = round(Y * STEP_SIZE);
 
