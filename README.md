@@ -26,6 +26,7 @@ Stepper and Servo Motors
 ![SD_init](Sdinit.jpg)
   
 ## GCode References
+* [Data Sheet for A4988](https://www.digchip.com/datasheets/parts/datasheet/029/A4988-pdf.php)
 * [CoreXY CNC Plotter](https://www.instructables.com/id/CoreXY-CNC-Plotter/?fbclid=IwAR0pwp5_IWx3ZKXX_-JnrqQA2Jc5w_0K_mVkKk8bpvbu7aeOSSTUAUPy2AY) 
 * [How to read GCode](https://makezine.com/2016/10/24/get-to-know-your-cnc-how-to-read-g-code/?fbclid=IwAR3-w1awEFc9UalxPZxf2Twn3zoppbnQXDNl3gHNShbNhc7IxlubZtNi5JA)
 * [Gcode Reference](https://www.cnccookbook.com/g-code-m-code-reference-list-cnc-mills/)
