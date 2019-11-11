@@ -54,21 +54,19 @@ void init_tim2(){
     //enable timer 2
     RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
 
-
-
-
     //count up
     TIM2->CR1 &= ~TIM_CR1_DIR;
 
-    //set it to 1ms trigger
-    TIM2->PSC = 4800-1;
-    TIM2->ARR = 100-1;
+    //set it to 1.6kHz trigger
+    TIM2->PSC = 48-1;
+    TIM2->ARR = 625-1;
 
-    TIM2->CCR2 = 50;
+    // 2% duty cycle
+    TIM2->CCR2 = 13;
 
-    //channel 2 toggle mode
-    TIM2->CCMR1 &= ~TIM_CCMR1_OC2M_2;
-    TIM2->CCMR1 |= TIM_CCMR1_OC2M_0 | TIM_CCMR1_OC2M_1;
+    //channel 2 PWM mode 1
+    //output is high as long as CNT < CCR2
+    TIM2->CCMR1 |= TIM_CCMR1_OC2M_0 | TIM_CCMR1_OC2M_1 |  TIM_CCMR1_OC2M_2 ;
 
     //enable output for TIM2
     TIM2->CCER |=  TIM_CCER_CC2E;
