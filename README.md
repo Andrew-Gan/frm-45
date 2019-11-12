@@ -1,3 +1,23 @@
+## Curent STM Size
+   text	   data	    bss	    dec	    hex	filename
+  47428	   2492	    752	  50672	   c5f0	SD_Card_std.elf
+    332	      0	      0	    332	    14c	src/button.o
+  24454	      0	    266	  24720	   6090	src/ff.o
+      0	      0	      0	      0	      0	src/ffsystem.o
+   1656	      0	      0	   1656	    678	src/ffunicode.o
+   1149	      0	      3	   1152	    480	src/main.o
+    196	      0	      0	    196	     c4	src/my_spi.o
+    824	      0	      8	    832	    340	src/oled.o
+   1064	      0	     12	   1076	    434	src/parser.o
+   3376	      1	      1	   3378	    d32	src/sd_card.o
+    594	      4	      8	    606	    25e	src/syscalls.o
+    512	     20	      0	    532	    214	src/system_stm32f0xx.o
+    468	      0	      0	    468	    1d4	src/timer.o
+
+
+
+
+
 # FRM-45
 ECE362 Project 1 Drawing Machine  
 

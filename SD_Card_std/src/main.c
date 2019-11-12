@@ -49,6 +49,7 @@ int main(void)
     DWORD fre_clust, fre_sect, tot_sect;
     FIL file;
 
+    disk_initialize(0);
 
 
     char buff1[128];
@@ -75,9 +76,6 @@ int main(void)
     Timer1 = 1* SECOND;
     lcd_output("Mounting SD   .",nothing,0,0);
     Timer1 = 1* SECOND;
-    lcd_output("Mounting SD.",nothing,0,0);
-    Timer1 = 1* SECOND;
-    lcd_output("Mounting SD .",nothing,0,0);
 
     // If succeed
     if(res == FR_OK){
@@ -155,17 +153,17 @@ int main(void)
         }
     }
 
-    f_open(&file,fno.fname,FA_READ);
-    TCHAR* bufRes = NULL;
-    LCDdisp disp;
-    do {
-        bufRes = f_gets(buff1,128,&file);
-        if(bufRes != NULL) {disp = parse_line(buff1);}
-        Timer1 = 5 *SECOND;
-        lcd_output(disp.gcode,disp.x,0,0);
-        clear_buffer(buff1);
-    }while(bufRes != NULL);
-    f_close(&file);
+//    f_open(&file,fno.fname,FA_READ);
+//    TCHAR* bufRes = NULL;
+//    LCDdisp disp;
+//    do {
+//        bufRes = f_gets(buff1,128,&file);
+//        if(bufRes != NULL) {disp = parse_line(buff1);}
+//        Timer1 = 5 *SECOND;
+//        lcd_output(disp.gcode,disp.x,0,0);
+//        clear_buffer(buff1);
+//    }while(bufRes != NULL);
+//    f_close(&file);
 
 
     return 0;
