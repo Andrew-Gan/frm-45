@@ -49,9 +49,6 @@ int main(void)
     DWORD fre_clust, fre_sect, tot_sect;
     FIL file;
 
-    disk_initialize(0);
-
-
     char buff1[128];
     char buff2[128];
 
