@@ -1,4 +1,5 @@
 ## Curent STM Size
+ROM(flash) = 64 KB, RAM = 4 KB
 ```
    text	   data	    bss	    dec	    hex	filename
   47428	   2492	    752	  50672	   c5f0	SD_Card_std.elf
