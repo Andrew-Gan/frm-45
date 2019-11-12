@@ -20,15 +20,6 @@ LCDdisp parse_line(const char*);
 // mode 0 : skip until space char
 // mode 1 : skip until non-space char
 // return : amount of char skipped
-int _spaceop(const char* buffer, int* start, int mode) {
-    int tmp = *start;
-    if(mode) {
-        while(buffer[*start] == ' ' && buffer[*start] != '\n' && buffer[*start] != '\r' && buffer[*start] != '\0') {(*start)++;}
-    }
-    else {
-        while(buffer[*start] != ' ' && buffer[*start] != '\n' && buffer[*start] != '\r' && buffer[*start] != '\0') {(*start)++;}
-    }
-    return *start - tmp;
-}
+int _spaceop(const char*, int*, int);
 
 #endif

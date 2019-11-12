@@ -11,6 +11,17 @@
 #define init_disp(disp) init_disp_field(disp.gcode); init_disp_field(disp.x); init_disp_field(disp.y); init_disp_field(disp.z);
 #define init_disp_field(field) for(int i = 0; i < sizeof(field) / sizeof(*field); i++) {field[i] = '\0';}
 
+int _spaceop(const char* buffer, int* start, int mode) {
+    int tmp = *start;
+    if(mode) {
+        while(buffer[*start] == ' ' && buffer[*start] != '\n' && buffer[*start] != '\r' && buffer[*start] != '\0') {(*start)++;}
+    }
+    else {
+        while(buffer[*start] != ' ' && buffer[*start] != '\n' && buffer[*start] != '\r' && buffer[*start] != '\0') {(*start)++;}
+    }
+    return *start - tmp;
+}
+
 // returns final position of pen based on mode (0:abs, 1:rel)
 static Vector update_pos(int posMode, LCDdisp disp) {
     static float xPos = 0.0, yPos = 0.0, zPos = 0.0;
