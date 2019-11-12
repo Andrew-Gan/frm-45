@@ -150,17 +150,17 @@ int main(void)
         }
     }
 
-//    f_open(&file,fno.fname,FA_READ);
-//    TCHAR* bufRes = NULL;
-//    LCDdisp disp;
-//    do {
-//        bufRes = f_gets(buff1,128,&file);
+    f_open(&file,fno.fname,FA_READ);
+    TCHAR* bufRes = NULL;
+    LCDdisp disp;
+    do {
+        bufRes = f_gets(buff1,128,&file);
 //        if(bufRes != NULL) {disp = parse_line(buff1);}
-//        Timer1 = 5 *SECOND;
-//        lcd_output(disp.gcode,disp.x,0,0);
-//        clear_buffer(buff1);
-//    }while(bufRes != NULL);
-//    f_close(&file);
+        Timer1 = 5 *SECOND;
+        lcd_output(disp.gcode,disp.x,0,0);
+        clear_buffer(buff1);
+    }while(bufRes != NULL);
+    f_close(&file);
 
 
     return 0;
