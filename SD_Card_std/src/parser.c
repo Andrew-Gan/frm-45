@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "parser.h"
@@ -55,8 +54,6 @@ LCDdisp parse_line(const char* buffer) {
                 case 'Y' : memcpy(disp.y, &(buffer[tmp]), gap);
                     break;
                 case 'Z' : memcpy(disp.z, &(buffer[tmp]), gap);
-                    break;
-                default  : printf("Unregistered addr\n");
             }
         }
         Vector newPos = update_pos(posMode, disp);
@@ -66,11 +63,7 @@ LCDdisp parse_line(const char* buffer) {
                 break;
             case '1' : //G1_cmd(coords.x, coords.y);
                 break;
-            default  :  printf("Unregistered gcode\n");
         }
-    }
-    else {
-        printf("line starting with char other than 'G' detected\n");
     }
     return disp;
 }
