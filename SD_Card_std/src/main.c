@@ -46,7 +46,6 @@ int main(void)
 {
     FATFS *fs;
     FATFS pfs;
-    DWORD fre_clust, fre_sect, tot_sect;
     FIL file;
 
     char buff1[128];
@@ -59,7 +58,7 @@ int main(void)
 
     /* Get volume information and free clusters of drive 1 */
     res = f_mount(&pfs, "", 0);
-    res  = f_getfree("", &fre_clust, &fs);
+    res = f_opendir(&dir,"/");
 
 
 
@@ -70,9 +69,6 @@ int main(void)
     lcd_output("Mounting SD .",nothing,0,0);
     Timer1 = 1* SECOND;
     lcd_output("Mounting SD  .",nothing,0,0);
-    Timer1 = 1* SECOND;
-    lcd_output("Mounting SD   .",nothing,0,0);
-    Timer1 = 1* SECOND;
 
     // If succeed
     if(res == FR_OK){
@@ -88,31 +84,28 @@ int main(void)
         }
     }
 
-    /* Get total sectors and free sectors */
-    tot_sect = ((fs->n_fatent - 2) * fs->csize) >> 1;
-    fre_sect = (fre_clust * fs->csize ) >> 1;
+//    /* Get total sectors and free sectors */
+//    tot_sect = ((fs->n_fatent - 2) * fs->csize) >> 1;
+//    fre_sect = (fre_clust * fs->csize ) >> 1;
+//
+//    sprintf(buff1, "Total: %luKB", tot_sect);
+//    sprintf(buff2, " Free: %luKB", fre_sect);
 
-    sprintf(buff1, "Total: %luKB", tot_sect);
-    sprintf(buff2, " Free: %luKB", fre_sect);
 
 
+//    Timer1 = 5 * SECOND;
+//    lcd_output(buff1,buff2,0,0);
+//
+//    clear_buffer(buff1);
+//    clear_buffer(buff2);
 
-    Timer1 = 5 * SECOND;
-    lcd_output(buff1,buff2,0,0);
 
-    clear_buffer(buff1);
-    clear_buffer(buff2);
-
-    res = f_opendir(&dir,"/");
 
     Timer1 = 1* SECOND;
     lcd_output("Opening","Directory.",0,0);
     Timer1 = 1* SECOND;
     lcd_output("Opening","Directory .",0,0);
-    Timer1 = 1* SECOND;
-    lcd_output("Opening","Directory  .",0,0);
-    Timer1 = 1* SECOND;
-    lcd_output("Opening","Directory   .",0,0);
+
 
     if(res != FR_OK){
         while(1){
@@ -155,7 +148,7 @@ int main(void)
     LCDdisp disp;
     do {
         bufRes = f_gets(buff1,128,&file);
-//        if(bufRes != NULL) {disp = parse_line(buff1);}
+        if(bufRes != NULL) {disp = parse_line(buff1);}
         Timer1 = 5 *SECOND;
         lcd_output(disp.gcode,disp.x,0,0);
         clear_buffer(buff1);
