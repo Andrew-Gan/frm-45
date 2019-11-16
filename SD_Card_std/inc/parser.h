@@ -12,7 +12,7 @@ typedef struct {
 
 // struct containing strings to be displayed on LED
 typedef struct {
-	char gcode[4], x[10], y[10], z[10];
+    char gcode[4], x[10], y[10], z[10];
 } LCDdisp;
 
 LCDdisp parse_line(const char*);

@@ -24,10 +24,10 @@ int _spaceop(const char* buffer, int* start, int mode) {
 // returns final position of pen based on mode (0:abs, 1:rel)
 static Vector update_pos(int posMode, LCDdisp disp) {
     static float xPos = 0.0, yPos = 0.0, zPos = 0.0;
-    Vector newPos = {   
-                        .x = posMode ? xPos + atof(disp.x) : atof(disp.x),
-                        .y = posMode ? yPos + atof(disp.y) : atof(disp.y),
-                        .z = posMode ? zPos + atof(disp.z) : atof(disp.z)
+    Vector newPos = {
+                        .x = posMode ? xPos + atoi(disp.x) : atoi(disp.x),
+                        .y = posMode ? yPos + atoi(disp.y) : atoi(disp.y),
+                        .z = posMode ? zPos + atoi(disp.z) : atoi(disp.z)
                     };
     return newPos;
 }
@@ -37,7 +37,7 @@ LCDdisp parse_line(const char* buffer) {
     // posMode: 0-abs, 1-rel
     int posMode = 0;
     // disp contain strings to be displayed on LED
-	LCDdisp disp;
+    LCDdisp disp;
     init_disp(disp);
     if(buffer[0] == 'G') {
         memcpy(disp.gcode, &(buffer[0]), 3);
