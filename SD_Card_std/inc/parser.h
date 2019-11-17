@@ -7,7 +7,7 @@
 #define calcdist(x, y) sqrt(pow(x, 2) + pow(y, 2))
 
 typedef struct {
-    float x, y, z;
+    int x, y, z;
 } Vector;
 
 // struct containing strings to be displayed on LED
@@ -15,7 +15,7 @@ typedef struct {
     char gcode[4], x[10], y[10], z[10];
 } LCDdisp;
 
-LCDdisp parse_line(const char*);
+void parse_line(const char*);
 
 // mode 0 : skip until space char
 // mode 1 : skip until non-space char

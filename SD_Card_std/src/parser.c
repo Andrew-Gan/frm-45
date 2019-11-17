@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "parser.h"
-// #include "step_control.h" // contains commands for G00 and G01
+#include "cnclib.h" // contains commands for G00 and G01
 
 // length of buffer passed into parse_line()
 #define BUFFER_LEN 128
@@ -23,17 +23,16 @@ int _spaceop(const char* buffer, int* start, int mode) {
 
 // returns final position of pen based on mode (0:abs, 1:rel)
 static Vector update_pos(int posMode, LCDdisp disp) {
-    static float xPos = 0.0, yPos = 0.0, zPos = 0.0;
     Vector newPos = {
-                        .x = posMode ? xPos + atoi(disp.x) : atoi(disp.x),
-                        .y = posMode ? yPos + atoi(disp.y) : atoi(disp.y),
-                        .z = posMode ? zPos + atoi(disp.z) : atoi(disp.z)
+                        .x = atoi(disp.x),
+                        .y = atoi(disp.y),
+                        .z = atoi(disp.z)
                     };
     return newPos;
 }
 
 // read lines in format: G0<code> <addr><value> <addr><value> ... \n
-LCDdisp parse_line(const char* buffer) {
+void parse_line(const char* buffer) {
     // posMode: 0-abs, 1-rel
     int posMode = 0;
     // disp contain strings to be displayed on LED
@@ -59,11 +58,10 @@ LCDdisp parse_line(const char* buffer) {
         Vector newPos = update_pos(posMode, disp);
         // call corresponding step_control.c function
         switch(buffer[2]) {
-            case '0' : //G0_cmd(coords.x, coords.y);
+            case '0' : G0_cmd(newPos.y, newPos.x);
                 break;
-            case '1' : //G1_cmd(coords.x, coords.y);
+            case '1' : G1_cmd(newPos.y, newPos.x);
                 break;
         }
     }
-    return disp;
 }

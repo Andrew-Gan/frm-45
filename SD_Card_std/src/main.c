@@ -9,6 +9,16 @@
 #include "button.h"
 #include "parser.h"
 
+
+extern int this_x, this_y, last_x, last_y;
+
+void init_GPIO() {
+    RCC->AHBENR |= RCC_AHBENR_GPIOBEN;
+    GPIOB->MODER |= GPIO_MODER_MODER7_0 |GPIO_MODER_MODER6_0| GPIO_MODER_MODER5_0;
+}
+
+
+
 //global variables
 char nothing [] = "";
 FRESULT res;
@@ -40,8 +50,6 @@ void clear_buffer(char *buff){
 }
 
 
-
-
 int main(void)
 {
     FATFS *fs;
@@ -56,6 +64,9 @@ int main(void)
     spi_init_lcd();
     // Initialize button
     init_exti();
+    //init_tim2
+    init_tim2();
+    init_GPIO();
 
     /* Get volume information and free clusters of drive 1 */
     res = f_mount(&pfs, "", 0);
@@ -64,12 +75,12 @@ int main(void)
 
 
     //output to LCD if initialization succeed
-    Timer1 = 1* SECOND;
-    lcd_output("Mounting SD.",nothing,0,0);
-    Timer1 = 1* SECOND;
-    lcd_output("Mounting SD .",nothing,0,0);
-    Timer1 = 1* SECOND;
-    lcd_output("Mounting SD  .",nothing,0,0);
+//    Timer1 = 1* SECOND;
+//    lcd_output("Mounting SD.",nothing,0,0);
+//    Timer1 = 1* SECOND;
+//    lcd_output("Mounting SD .",nothing,0,0);
+//    Timer1 = 1* SECOND;
+//    lcd_output("Mounting SD  .",nothing,0,0);
 
     // If succeed
     if(res == FR_OK){
@@ -94,7 +105,7 @@ int main(void)
 
 
 
-    Timer1 = 5 * SECOND;
+    Timer1 = 2 * SECOND;
     lcd_output(buff1,buff2,0,0);
 
     clear_buffer(buff1);
@@ -102,14 +113,14 @@ int main(void)
 
     res = f_opendir(&dir,"/");
 
-    Timer1 = 1* SECOND;
-    lcd_output("Opening","Directory.",0,0);
-    Timer1 = 1* SECOND;
-    lcd_output("Opening","Directory .",0,0);
-    Timer1 = 1* SECOND;
-    lcd_output("Opening","Directory  .",0,0);
-    Timer1 = 1* SECOND;
-    lcd_output("Opening","Directory   .",0,0);
+//    Timer1 = 1* SECOND;
+//    lcd_output("Opening","Directory.",0,0);
+//    Timer1 = 1* SECOND;
+//    lcd_output("Opening","Directory .",0,0);
+//    Timer1 = 1* SECOND;
+//    lcd_output("Opening","Directory  .",0,0);
+//    Timer1 = 1* SECOND;
+//    lcd_output("Opening","Directory   .",0,0);
 
     if(res != FR_OK){
         while(1){
@@ -148,16 +159,17 @@ int main(void)
     }
 
     f_open(&file,fno.fname,FA_READ);
+    Timer1 = 5 *SECOND;
+    lcd_output("drawing", nothing,0,0);
     TCHAR* bufRes = NULL;
     do {
         bufRes = f_gets(buff1,128,&file);
         if(bufRes != NULL) {parse_line(buff1);}
-        Timer1 = 5 *SECOND;
-        lcd_output("drawing", nothing,0,0);
+
         clear_buffer(buff1);
     }while(bufRes != NULL);
     f_close(&file);
-
+    pen_up();
 
     return 0;
 }
