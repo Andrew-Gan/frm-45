@@ -33,4 +33,4 @@ Program a [plotter](https://www.banggood.com/EleksMaker-EleksDraw-XY-Plotter-Pen
 * [Another website about how to make gcode](https://www.marginallyclever.com/2013/08/how-to-build-an-2-axis-arduino-cnc-gcode-interpreter/?fbclid=IwAR2Cuwl6wh2F5Wqw8JK4fef5dCa7CKCwGwoWh0Y8hn-iv6d_DvxPZTSHs24)
 * [Bresenham's line algorithm to draw a line between 2 points](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm)
 
-![G-Code](Parser/g-code.png)
+
