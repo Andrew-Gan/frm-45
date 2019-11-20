@@ -6,7 +6,7 @@
 * **PA8** - _servomotor_  
 * **PA4-7** - _sd card reader_
 * **PB12-15**  - _OLED display_
-* **PA1-PA2**  - _EXTI interrupt_
+* **PA0,PA2**  - _EXTI interrupt_
   
 ## SD Card and OLED References
 ---
