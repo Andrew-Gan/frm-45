@@ -62,7 +62,7 @@ void init_tim2(){
     TIM2->ARR = 625-1;
 
     // 2% duty cycle
-    TIM2->CCR2 = 13;
+    TIM2->CCR2 = 625 - 13;
 
     //channel 2 PWM mode 1
     //output is high as long as CNT < CCR2
@@ -72,6 +72,5 @@ void init_tim2(){
     TIM2->CCER |=  TIM_CCER_CC2E;
 
     //enable timer2
-    TIM2->CR1 |= TIM_CR1_CEN;
 
 }

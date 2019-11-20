@@ -39,8 +39,8 @@ SD.list \
 all: SD.elf secondary-outputs
 
 # Tool invocations
-SD.elf: $(OBJS) $(USER_OBJS) /home/lau/STM32CubeIDE/workspace_1.0.2/SD/STM32F051R8TX_FLASH.ld
-	arm-none-eabi-gcc -o "SD.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"/home/lau/STM32CubeIDE/workspace_1.0.2/SD/STM32F051R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+SD.elf: $(OBJS) $(USER_OBJS) /home/lau/Projects/frm-45/SD_working_HAL/STM32F051R8TX_FLASH.ld
+	arm-none-eabi-gcc -o "SD.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"/home/lau/Projects/frm-45/SD_working_HAL/STM32F051R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
