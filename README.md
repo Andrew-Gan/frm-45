@@ -11,7 +11,6 @@ Program a [plotter](https://www.banggood.com/EleksMaker-EleksDraw-XY-Plotter-Pen
 * **PA0,PA2**  - _EXTI interrupt_
   
 ## SD Card and OLED References
----
 - [Reading From SD Card](http://shukra.cedt.iisc.ernet.in/edwiki/Reading_and_writing_to_a_file_on_sd_card_using_stm32_discovery_kit)
 - [Example from book](https://docs.google.com/file/d/0B8buOhyZhvwZRU9XWHBpYUYyUnc/edit)
 - [Open Source Library](http://elm-chan.org/fsw/ff/00index_e.html)
