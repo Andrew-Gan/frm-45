@@ -4,15 +4,16 @@ Program a [plotter](https://www.banggood.com/EleksMaker-EleksDraw-XY-Plotter-Pen
 
 ## Development Environment
 - [System Workbench](https://www.st.com/en/development-tools/sw4stm32.html)
+
+## MCU
+- [STM32F0DISCOVERY](https://www.st.com/en/evaluation-tools/stm32f0discovery.html)
+
 ## Used Pins
 * **PA8** - _servomotor_  
 * **PA4-7** - _sd card reader_
 * **PB12-15**  - _OLED display_
 * **PA0,PA2**  - _EXTI interrupt_
 
-## MCU
-- [STM32F0DISCOVERY](https://www.st.com/en/evaluation-tools/stm32f0discovery.html)
-  
 ## SD Card and OLED References
 - [Reading For SD Card](http://shukra.cedt.iisc.ernet.in/edwiki/Reading_and_writing_to_a_file_on_sd_card_using_stm32_discovery_kit)
 - [Example from book](https://docs.google.com/file/d/0B8buOhyZhvwZRU9XWHBpYUYyUnc/edit)
