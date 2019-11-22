@@ -123,13 +123,14 @@ int main(void)
 //    lcd_output("Opening","Directory   .",0,0);
 
     if(res != FR_OK){
+        f_close(&file);
         while(1){
             Timer1 = 5 * SECOND;
             lcd_output("Error","Closing Directory",0,0);
         }
     }
-
-    while(1){
+    //if enter is not pressed
+    while(enter != true){
         /* if button is pressed */
         if(button_is_pressed == true) {
 
@@ -143,8 +144,7 @@ int main(void)
             button_is_pressed = false;
         }
         else{
-            //if enter is pressed
-            if(enter == true) break;
+
             // output only if the first character is valid
             if(fno.fname[0] != 0 && fno.fname[0] != 45 ){
                 Timer1 = 1*SECOND;
