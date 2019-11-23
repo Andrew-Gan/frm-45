@@ -10,7 +10,6 @@
 #include "parser.h"
 
 
-extern int this_x, this_y, last_x, last_y;
 
 void init_GPIO() {
     RCC->AHBENR |= RCC_AHBENR_GPIOBEN;
@@ -52,6 +51,7 @@ void clear_buffer(char *buff){
 
 int main(void)
 {
+    tim1_init();
     FATFS *fs;
     FATFS pfs;
     DWORD fre_clust, fre_sect, tot_sect;
@@ -75,12 +75,10 @@ int main(void)
 
 
     //output to LCD if initialization succeed
-//    Timer1 = 1* SECOND;
-//    lcd_output("Mounting SD.",nothing,0,0);
-//    Timer1 = 1* SECOND;
-//    lcd_output("Mounting SD .",nothing,0,0);
-//    Timer1 = 1* SECOND;
-//    lcd_output("Mounting SD  .",nothing,0,0);
+    Timer1 = 1* SECOND;
+    lcd_output("Mounting SD.",nothing,0,0);
+    Timer1 = 1* SECOND;
+    lcd_output("Mounting SD .",nothing,0,0);
 
     // If succeed
     if(res == FR_OK){
@@ -111,25 +109,25 @@ int main(void)
     clear_buffer(buff1);
     clear_buffer(buff2);
 
+    menu:
     res = f_opendir(&dir,"/");
 
-//    Timer1 = 1* SECOND;
-//    lcd_output("Opening","Directory.",0,0);
-//    Timer1 = 1* SECOND;
-//    lcd_output("Opening","Directory .",0,0);
-//    Timer1 = 1* SECOND;
-//    lcd_output("Opening","Directory  .",0,0);
-//    Timer1 = 1* SECOND;
-//    lcd_output("Opening","Directory   .",0,0);
+    Timer1 = 1* SECOND;
+    lcd_output("Opening","Directory.",0,0);
+    Timer1 = 1* SECOND;
+    lcd_output("Opening","Directory .",0,0);
+    Timer1 = 1* SECOND;
+    lcd_output("Opening","Directory  .",0,0);
+
 
     if(res != FR_OK){
-        f_close(&file);
         while(1){
             Timer1 = 5 * SECOND;
             lcd_output("Error","Closing Directory",0,0);
         }
     }
-    //if enter is not pressed
+
+
     while(enter != true){
         /* if button is pressed */
         if(button_is_pressed == true) {
@@ -144,6 +142,7 @@ int main(void)
             button_is_pressed = false;
         }
         else{
+            //if enter is pressed
 
             // output only if the first character is valid
             if(fno.fname[0] != 0 && fno.fname[0] != 45 ){
@@ -171,8 +170,15 @@ int main(void)
     f_close(&file);
     pen_up();
 
+    //again
+    button_is_pressed = false;
+    enter = false;
+    goto menu;
+
     return 0;
 }
+
+
 
 
 ///
