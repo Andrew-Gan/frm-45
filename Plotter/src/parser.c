@@ -23,18 +23,22 @@ int _spaceop(const char* buffer, int* start, int mode) {
 
 // returns final position of pen based on mode (0:abs, 1:rel)
 static Vector update_pos(int posMode, LCDdisp disp) {
-    Vector newPos = {
-                        .x = atoi(disp.x),
-                        .y = atoi(disp.y),
-                        .z = atoi(disp.z)
+    static Vector currPos = {.x = 0, .y = 0, .z = 0};
+    Vector newDir = {
+                        .x = posMode == 1 ? atoi(disp.x) : atoi(disp.x) - currPos.x,
+                        .y = posMode == 1 ? atoi(disp.y) : atoi(disp.y) - currPos.y,
+                        .z = posMode == 1 ? atoi(disp.z) : atoi(disp.z) - currPos.z
                     };
-    return newPos;
+    currPos.x += newDir.x;
+    currPos.y += newDir.y;
+    currPos.z += newDir.z;
+    return newDir;
 }
 
 // read lines in format: G0<code> <addr><value> <addr><value> ... \n
 void parse_line(const char* buffer) {
     // posMode: 0-abs, 1-rel
-    int posMode = 0;
+    static int posMode = 0;
     // disp contain strings to be displayed on LED
     LCDdisp disp;
     init_disp(disp);
@@ -57,11 +61,21 @@ void parse_line(const char* buffer) {
         }
         Vector newPos = update_pos(posMode, disp);
         // call corresponding step_control.c function
-        switch(buffer[2]) {
-            case '0' : G0_cmd(newPos.y, newPos.x);
-                break;
-            case '1' : G1_cmd(newPos.y, newPos.x);
-                break;
+        if(buffer[1] == '0') {
+            switch(buffer[2]) {
+                case '0' : G0_cmd(newPos.y, newPos.x);
+                    break;
+                case '1' : G1_cmd(newPos.y, newPos.x);
+                    break;
+            }
+        }
+        else if(buffer[1] == '9') {
+            switch(buffer[2]) {
+                case '0' : posMode = 0;
+                    break;
+                case '1' : posMode = 1;
+                    break;
+            }
         }
     }
 }

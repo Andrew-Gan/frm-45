@@ -10,7 +10,6 @@
 #include "parser.h"
 
 
-
 void init_GPIO() {
     RCC->AHBENR |= RCC_AHBENR_GPIOBEN;
     GPIOB->MODER |= GPIO_MODER_MODER7_0 |GPIO_MODER_MODER6_0| GPIO_MODER_MODER5_0;
@@ -75,10 +74,10 @@ int main(void)
 
 
     //output to LCD if initialization succeed
-    Timer1 = 1* SECOND;
-    lcd_output("Mounting SD.",nothing,0,0);
-    Timer1 = 1* SECOND;
-    lcd_output("Mounting SD .",nothing,0,0);
+//    Timer1 = 1* SECOND;
+//    lcd_output("Mounting SD.",nothing,0,0);
+//    Timer1 = 1* SECOND;
+//    lcd_output("Mounting SD .",nothing,0,0);
 
     // If succeed
     if(res == FR_OK){
@@ -95,11 +94,11 @@ int main(void)
     }
 
     /* Get total sectors and free sectors */
-    tot_sect = ((fs->n_fatent - 2) * fs->csize) >> 1;
-    fre_sect = (fre_clust * fs->csize ) >> 1;
-
-    sprintf(buff1, "Total: %luKB", tot_sect);
-    sprintf(buff2, " Free: %luKB", fre_sect);
+//    tot_sect = ((fs->n_fatent - 2) * fs->csize) >> 1;
+//    fre_sect = (fre_clust * fs->csize ) >> 1;
+//
+//    sprintf(buff1, "Total: %luKB", tot_sect);
+//    sprintf(buff2, " Free: %luKB", fre_sect);
 
 
 
@@ -112,12 +111,12 @@ int main(void)
     menu:
     res = f_opendir(&dir,"/");
 
-    Timer1 = 1* SECOND;
-    lcd_output("Opening","Directory.",0,0);
-    Timer1 = 1* SECOND;
-    lcd_output("Opening","Directory .",0,0);
-    Timer1 = 1* SECOND;
-    lcd_output("Opening","Directory  .",0,0);
+//    Timer1 = 1* SECOND;
+//    lcd_output("Opening","Directory.",0,0);
+//    Timer1 = 1* SECOND;
+//    lcd_output("Opening","Directory .",0,0);
+//    Timer1 = 1* SECOND;
+//    lcd_output("Opening","Directory  .",0,0);
 
 
     if(res != FR_OK){
