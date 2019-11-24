@@ -158,7 +158,7 @@ int main(void)
 
     f_open(&file,fno.fname,FA_READ);
     Timer1 = 5 *SECOND;
-    lcd_output("drawing", nothing,0,0);
+    lcd_output("Drawing", nothing,0,0);
     TCHAR* bufRes = NULL;
     do {
         bufRes = f_gets(buff1,128,&file);

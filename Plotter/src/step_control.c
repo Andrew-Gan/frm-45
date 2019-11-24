@@ -20,14 +20,14 @@ bool DIRECTION1, DIRECTION2;
 
 void G0_cmd(int Y, int X){
     float x = X, y = Y;
-    Timer1 = 50;
+    Timer1 = 200;
     pen_up();
     while(Timer1){}
     move_to(x, y);
 }
 
 void G1_cmd(int Y, int X){
-    Timer1 = 50;
+    Timer1 = 200;
     pen_down();
     while(Timer1){}
     move_to(X, Y);
