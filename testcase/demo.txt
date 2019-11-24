@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+// character B
+//move to absolute poition first
+G90 X0 Y0
+G00 X75 Y-20
+//switch back to relative position
+G91 X0 Y0
+G01 X0 Y-20
+G01 X10 Y0
+G01 X0 Y20
+G00 X0 Y-10
+G01 X-10 Y0
+//move to another character
+G00 X15 Y10
+
+// character O
+G01 X0 Y-20
+G01 X10 Y0
+G01 X0 Y20
+G01 X-10 Y0 
+//move to another character
+G00 X15 Y-20
+
+//character N
+G01 X0 Y20
+G01 X10 Y-10
+G01 X0 Y20
+
