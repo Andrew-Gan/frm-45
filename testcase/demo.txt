@@ -1,23 +1,141 @@
+G91
+
+// char 'R'
+G00 X-60 Y50
+G01 X0 Y0
+G01 X0 Y0
+G01 X10 Y0
+G01 X0 Y-10
+G01 X-10 Y0
+G01 X0 Y10
+G01 X0 Y-20
+G01 X0 Y0
+G01 X0 Y10
+G01 X10 Y-10
+
+// char 'I'
+G00 X5 Y0
+G01 X0 Y0
+G01 X0 Y0
+G01 X10 Y0
+G01 X-5 Y0
+G01 X0 Y20
+G01 X-5 Y0
+G01 X10 Y0
+
+// char 'C'
+G00 X5 Y0
+G01 X0 Y0
+G01 X0 Y0
+G01 X10 Y0
+G01 X-10 Y0
+G01 X0 Y-20
+G01 X10 Y0
+G00 X0 Y0
+G00 X0 Y0
+
+// char 'K'
+G00 X5 Y0
+G01 X0 Y0
+G01 X0 Y0
+G01 X0 Y20
+G01 X0 Y-10
+G01 X10 Y10
+G01 X-10 Y-10
+G01 X10 Y-10
+//move to another character
+G00 X10 Y20
+
+//character G
+G01 X10 Y0
+G01 X-10 Y0
+G01 X0 Y-15
+G01 X10 Y0
+G01 X0 Y5
+G01 X5 Y0
+G01 X-10 Y0
+G01 X5 Y0
+G01 X0 Y-10
+//move to another character
+G00 X5 Y0
 
 
+//character I
+G01 X10 Y0
+G01 X-5 Y0
+G01 X0 Y20
+G01 X-5 Y0
+G01 X10 Y0
+//move to another character
+G00 X5 Y0
+
+//character V
+G01 X5 Y-20
+G01 X5 Y20
+//move to another character
+G00 X5 Y0
+
+//character E
+G01 X10 Y0
+G01 X-10 Y0
+G01 X0 Y-10
+G01 X10 Y0
+G01 X-10 Y0
+G01 X0 Y-10
+G01 X10 Y0
+//move to another character 
+G00 X15 Y20 
 
 
+//character S 
+G01 X-10 Y0
+G01 X0 Y-10
+G01 X10 Y0
+G01 X0 Y-10
+G01 X-10 Y0 
+
+// reset to initial pos
+G90
+G00 X0 Y0
+// switch mode
+G91
 
 
+// move to the cursor position
+G00 X-15 Y20 
 
-// character B
-//move to absolute poition first
-G90 X0 Y0
-G00 X75 Y-20
-//switch back to relative position
-G91 X0 Y0
+//character U
 G01 X0 Y-20
 G01 X10 Y0
 G01 X0 Y20
-G00 X0 Y-10
+//move to another character 
+G00 X15 Y0 
+
+//character S 
 G01 X-10 Y0
+G01 X0 Y-10
+G01 X10 Y0
+G01 X0 Y-10
+G01 X-10 Y0 
+
+// reset to initial pos
+G90
+G00 X0 Y0
+//switch mode
+G91
+
+
+// move to the cursor position
+G00 X-75 Y-10
+// character B
+G01 X0 Y-20
+G01 X10 Y0
+G01 X0 Y20
+G01 X-10 Y0
+G00 X0 Y-10
+G01 X10 Y0
 //move to another character
-G00 X15 Y10
+G00 X5 Y10
 
 // character O
 G01 X0 Y-20
@@ -29,7 +147,7 @@ G00 X15 Y-20
 
 //character N
 G01 X0 Y20
-G01 X10 Y-10
+G01 X10 Y-20
 G01 X0 Y20
 //move to another character
 G00 X5 Y0
@@ -55,7 +173,7 @@ G01 X0 Y20
 G01 X10 Y0
 G01 X0 Y-10
 G01 X-10 Y0 
-//move to anotehr character
+//move to another character
 G00 X15 Y10
 
 //character O
@@ -63,25 +181,31 @@ G01 X0 Y-20
 G01 X10 Y0
 G01 X0 Y20
 G01 X-10 Y0 
-//move to anotehr character
+//move to another character
 G00 X15 Y-20
 
 //character I
-//move to anotehr character
+G01 X10 Y0
+G01 X-5 Y0
+G01 X0 Y20
+G01 X-5 Y0
+G01 X10 Y0
+//move to another character
+G00 X5 Y-20
 
 //character N
 G01 X0 Y20
-G01 X10 Y-10
+G01 X10 Y-20
 G01 X0 Y20
-//move to anotehr character
+//move to another character
 G00 X5 Y0
 
 //character T
 G01 X10 Y0
 G01 X-5 Y0
 G01 X0 Y-20
-//move to anotehr character
-
+//move to another character
+G00 X20 Y20
 
 //character S
 G01 X-10 Y0
@@ -89,7 +213,20 @@ G01 X0 Y-10
 G01 X10 Y0
 G01 X0 Y-10
 G01 X-10 Y0 
+//move to another character
+G00 X15 Y0
+
+//character !
+G01 X5 Y0
+G01 X0 Y5
+G01 X-5 Y0
+G01 X0 Y-5
+G00 X0 Y10
+G01 X0 Y10
+G01 X5 Y0 
+G01 X0 Y-10
+G01 X-5 Y0
 
 //move back to origin
-G90 X0 Y0
+G90
 G00 X0 Y0
