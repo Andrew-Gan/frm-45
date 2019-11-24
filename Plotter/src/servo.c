@@ -2,10 +2,10 @@
 #include "stm32f0_discovery.h"
 #include <stdint.h>
 
-#define up 20
-#define down 1000
+#define up 335
+#define down 370
 
-void tim1_init(int pen_mode) {
+void tim1_init() {
     /* Student code goes here */
     RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
     GPIOA->MODER |= 0x2A0000;
@@ -13,7 +13,7 @@ void tim1_init(int pen_mode) {
     RCC->APB2ENR |= RCC_APB2ENR_TIM1EN;
     TIM1->PSC = 239;
     TIM1->ARR = 3999;
-    TIM1->CCR1 = pen_mode;
+    TIM1->CCR1 = up;
     TIM1->CCMR1 |= TIM_CCMR1_OC1M_2 | TIM_CCMR1_OC1M_1
      | TIM_CCMR1_OC1PE;
     TIM1->CCER |= TIM_CCER_CC1E;
@@ -23,9 +23,9 @@ void tim1_init(int pen_mode) {
 }
 
 void pen_up(){
-    tim1_init(up);
+    TIM1->CCR1 = up;
 }
 
 void pen_down(){
-    tim1_init(down);
+    TIM1->CCR1 = down;
 }
