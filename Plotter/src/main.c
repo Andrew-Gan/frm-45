@@ -8,6 +8,7 @@
 #include "oled.h"
 #include "button.h"
 #include "parser.h"
+#include "cnclib.h"
 
 
 void init_GPIO() {
@@ -38,6 +39,26 @@ void EXTI2_3_IRQHandler(){
     EXTI->PR |= EXTI_PR_PR2;
     //if enter is pressed
     enter = true;
+}
+
+//interrupt for manual movement
+void EXTI4_15_IRQHandler(){
+    if((EXTI->PR & EXTI_PR_PR4)) {
+        EXTI->PR |= EXTI_PR_PR4;
+        G0_cmd(-5, 0);
+    }
+    else if((EXTI->PR & EXTI_PR_PR5)) {
+        EXTI->PR |= EXTI_PR_PR5;
+        G0_cmd(5, 0);
+    }
+    else if((EXTI->PR & EXTI_PR_PR6)) {
+        EXTI->PR |= EXTI_PR_PR6;
+        G0_cmd(0, -5);
+    }
+    else if((EXTI->PR & EXTI_PR_PR7)) {
+        EXTI->PR |= EXTI_PR_PR7;
+        G0_cmd(0, 5);
+    }
 }
 
 

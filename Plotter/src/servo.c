@@ -2,7 +2,7 @@
 #include "stm32f0_discovery.h"
 #include <stdint.h>
 
-#define up 335
+#define up 325
 #define down 370
 
 void tim1_init() {
