@@ -20,14 +20,14 @@ bool DIRECTION1, DIRECTION2;
 
 void G0_cmd(int Y, int X){
     float x = X, y = Y;
-    Timer1 = 200;
+    Timer1 = 50;
     pen_up();
     while(Timer1){}
     move_to(x, y);
 }
 
 void G1_cmd(int Y, int X){
-    Timer1 = 200;
+    Timer1 = 50;
     pen_down();
     while(Timer1){}
     move_to(X, Y);
@@ -61,8 +61,6 @@ void stepper_move(){
     GPIOB->BSRR = GPIO_BSRR_BS_6;
 
 
-    Timer1=1;
-    while(Timer1){};
 }
 
 void step_down(){
