@@ -12,7 +12,8 @@ Program a [plotter](https://www.banggood.com/EleksMaker-EleksDraw-XY-Plotter-Pen
 * **PA8** - _servomotor_  
 * **PA4-7** - _sd card reader_
 * **PB12-15**  - _OLED display_
-* **PA0,PA2**  - _EXTI interrupt_
+* **PA0,PA2**  - _Scroll and select (EXTI)_
+* **PC4-7** - _Directional buttons (EXTI)_
 
 ## SD Card and OLED References
 - [Reading For SD Card](http://shukra.cedt.iisc.ernet.in/edwiki/Reading_and_writing_to_a_file_on_sd_card_using_stm32_discovery_kit)
@@ -28,6 +29,12 @@ Program a [plotter](https://www.banggood.com/EleksMaker-EleksDraw-XY-Plotter-Pen
 ![SD_init](Sdinit.jpg)
   
 ## GCode References
+| G-code | Arg 1 | Arg 2 | Description                     |
+|--------|-------|-------|---------------------------------|
+| G00    | X     | Y     | Relocate pen while raised       |
+| G01    | X     | Y     | Linearly move pen while dropped |
+| G90    | -     | -     | Switch to absolute coordinates  |
+| G91    | -     | -     | Switch to relative coordinates  |
 * [Data Sheet for A4988](https://www.digchip.com/datasheets/parts/datasheet/029/A4988-pdf.php)
 * [CoreXY CNC Plotter](https://www.instructables.com/id/CoreXY-CNC-Plotter/?fbclid=IwAR0pwp5_IWx3ZKXX_-JnrqQA2Jc5w_0K_mVkKk8bpvbu7aeOSSTUAUPy2AY) 
 * [How to read GCode](https://makezine.com/2016/10/24/get-to-know-your-cnc-how-to-read-g-code/?fbclid=IwAR3-w1awEFc9UalxPZxf2Twn3zoppbnQXDNl3gHNShbNhc7IxlubZtNi5JA)
