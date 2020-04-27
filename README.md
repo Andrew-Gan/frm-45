@@ -2,6 +2,8 @@
 - [ECE362 Project 1 Drawing Machine](https://github.com/Andrew-Gan/frm-45/tree/master/SD_Card_std)  
 Program a [plotter](https://www.banggood.com/EleksMaker-EleksDraw-XY-Plotter-Pen-Drawing-Writing-Robot-Drawing-Machine-p-1125222.html?akmClientCountry=America&p=IB170413294898201708&utm_campaign=13294898_1125222&utm_content=1497&cur_warehouse=USA) that can move to the coordinates specified in SD Card
 
+- team: [kroghm96](https://github.com/kroghm96), [lauchokyip](https://gitlab.com/lauchokyip), Ryan
+
 ## Development Environment
 - [System Workbench](https://www.st.com/en/development-tools/sw4stm32.html)
 
